@@ -6,14 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://anson1066.github.io">
-  <title>Anson的小站</title>
+  <title>CNN | Anson的小站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这是一个tensorflow笔记。我的版本是TensorFlow_GPU—2.3.0.1%config IPCompleter.greedy&#x3D;True     #TAB键代码自动提示   12import tensorflow as tfprint(tf.__version__)  2.3.0  12import tensorflow as tfprint(&quot;GPU:&quot;,tf.">
+  <meta name="description" content="这是一个tensorflow笔记。我的版本是TensorFlow_GPU—2.3.0.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Anson的小站">
-<meta property="og:url" content="https://anson1066.github.io/2021/08/18/CNN/index.html">
+<meta property="og:title" content="CNN">
+<meta property="og:url" content="https://anson1066.github.io/2021/08/08/CNN/index.html">
 <meta property="og:site_name" content="Anson的小站">
-<meta property="og:description" content="这是一个tensorflow笔记。我的版本是TensorFlow_GPU—2.3.0.1%config IPCompleter.greedy&#x3D;True     #TAB键代码自动提示   12import tensorflow as tfprint(tf.__version__)  2.3.0  12import tensorflow as tfprint(&quot;GPU:&quot;,tf.">
+<meta property="og:description" content="这是一个tensorflow笔记。我的版本是TensorFlow_GPU—2.3.0.">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gitee.com/anson1066/picgo_image/raw/master/img/20210818205809.png">
 <meta property="og:image" content="attachment:4649135c-d44b-4e4d-9d72-a7fd1f892fbd.png">
@@ -21,9 +21,10 @@
 <meta property="og:image" content="https://gitee.com/anson1066/picgo_image/raw/master/img/20210818205759.png">
 <meta property="og:image" content="https://gitee.com/anson1066/picgo_image/raw/master/img/20210818205658.png">
 <meta property="og:image" content="https://gitee.com/anson1066/picgo_image/raw/master/img/20210818205745.png">
-<meta property="article:published_time" content="2021-08-18T12:48:56.436Z">
-<meta property="article:modified_time" content="2021-08-18T12:59:46.875Z">
+<meta property="article:published_time" content="2021-08-08T12:45:14.000Z">
+<meta property="article:modified_time" content="2021-08-18T13:08:51.856Z">
 <meta property="article:author" content="Anson">
+<meta property="article:tag" content="神经网络">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://gitee.com/anson1066/picgo_image/raw/master/img/20210818205809.png">
   
@@ -212,9 +213,53 @@
   class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CNN
+    </h1>
+  
+
+          
+            <a href="/2021/08/08/CNN/" class="archive-article-date">
+  	<time datetime="2021-08-08T12:45:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-08</time>
+</a>
+              
+
+                
+                  <div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-keyboard-o"></i>
+      <span class="post-meta-item-text">  字数统计: </span>
+      <span class="post-count">16.8k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="fa fa-hourglass-half"></i>
+      <span class="post-meta-item-text">  阅读时长: </span>
+      <span class="post-count">103分</span>
+    </span>
+  </span>
+</div>
+
+                    
+
+
+
+
+      </header>
+      
         <div class="article-entry" itemprop="articleBody">
           
-                    <h1 id="这是一个tensorflow笔记。我的版本是TensorFlow-GPU—2-3-0"><a href="#这是一个tensorflow笔记。我的版本是TensorFlow-GPU—2-3-0" class="headerlink" title="这是一个tensorflow笔记。我的版本是TensorFlow_GPU—2.3.0."></a>这是一个tensorflow笔记。我的版本是TensorFlow_GPU—2.3.0.</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%config IPCompleter.greedy=<span class="literal">True</span>     <span class="comment">#TAB键代码自动提示</span></span><br></pre></td></tr></table></figure>
+                    <h3 id="这是一个tensorflow笔记。我的版本是TensorFlow-GPU—2-3-0"><a href="#这是一个tensorflow笔记。我的版本是TensorFlow-GPU—2-3-0" class="headerlink" title="这是一个tensorflow笔记。我的版本是TensorFlow_GPU—2.3.0."></a>这是一个tensorflow笔记。我的版本是TensorFlow_GPU—2.3.0.</h3><span id="more"></span>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%config IPCompleter.greedy=<span class="literal">True</span>     <span class="comment">#TAB键代码自动提示</span></span><br></pre></td></tr></table></figure>
 
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"><span class="built_in">print</span>(tf.__version__)</span><br></pre></td></tr></table></figure>
@@ -2240,7 +2285,7 @@ array([[18.999891]], dtype=float32)
 <h5 id="加载FashionMNIST数据集。"><a href="#加载FashionMNIST数据集。" class="headerlink" title="加载FashionMNIST数据集。"></a>加载FashionMNIST数据集。</h5><ul>
 <li>FashionMNIST数据集：60000/10000 的训练测试数据划分，28x28 的灰度图片。</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"><span class="keyword">from</span> tensorflow <span class="keyword">import</span> keras</span><br><span class="line">fashion_mnist = keras.datasets.fashion_mnist</span><br><span class="line">(train_images,train_labels),(test_images,test_labels) = fashion_mnist.load_data()</span><br><span class="line"></span><br><span class="line"><span class="comment"># print(train_images.shape)</span></span><br><span class="line"><span class="comment"># print(test_images.shape)</span></span><br><span class="line"><span class="comment"># print(train_images[0])</span></span><br><span class="line"><span class="comment"># print(train_labels.shape)</span></span><br><span class="line"><span class="comment"># print(train_labels[:10])</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">plt.imshow(train_images[<span class="number">540</span>])</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tffrom tensorflow <span class="keyword">import</span> kerasfashion_mnist = keras.datasets.fashion_mnist(train_images,train_labels),(test_images,test_labels) = fashion_mnist.load_data()<span class="comment"># print(train_images.shape)# print(test_images.shape)# print(train_images[0])# print(train_labels.shape)# print(train_labels[:10])import matplotlib.pyplot as pltplt.imshow(train_images[540])</span></span><br></pre></td></tr></table></figure>
 
 
 
@@ -2251,38 +2296,16 @@ array([[18.999891]], dtype=float32)
     
 
 
-<h5 id="构造神经元网络模型"><a href="#构造神经元网络模型" class="headerlink" title="构造神经元网络模型"></a>构造神经元网络模型</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># model = keras.Sequential([</span></span><br><span class="line"><span class="comment">#     keras.layers.Flatten(input_shape=(28,28)),</span></span><br><span class="line"><span class="comment">#     keras.layers.Dense(128,activation=tf.nn.relu),</span></span><br><span class="line"><span class="comment">#     keras.layers.Dense(10,activation=tf.nn.softmax)</span></span><br><span class="line"><span class="comment"># ])</span></span><br><span class="line"></span><br><span class="line">model = keras.Sequential()</span><br><span class="line">model.add(keras.layers.Flatten(input_shape=(<span class="number">28</span>,<span class="number">28</span>)))       <span class="comment">#输入层</span></span><br><span class="line">model.add(keras.layers.Dense(<span class="number">128</span>,activation=tf.nn.relu))   </span><br><span class="line">model.add(keras.layers.Dense(<span class="number">10</span>,activation=tf.nn.softmax))   <span class="comment">#输出层</span></span><br></pre></td></tr></table></figure>
+<h5 id="构造神经元网络模型"><a href="#构造神经元网络模型" class="headerlink" title="构造神经元网络模型"></a>构造神经元网络模型</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># model = keras.Sequential([#     keras.layers.Flatten(input_shape=(28,28)),#     keras.layers.Dense(128,activation=tf.nn.relu),#     keras.layers.Dense(10,activation=tf.nn.softmax)# ])model = keras.Sequential()model.add(keras.layers.Flatten(input_shape=(28,28)))       #输入层model.add(keras.layers.Dense(128,activation=tf.nn.relu))   model.add(keras.layers.Dense(10,activation=tf.nn.softmax))   #输出层</span></span><br></pre></td></tr></table></figure>
 
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">model.summary()    <span class="comment">#输出网络结构</span></span><br></pre></td></tr></table></figure>
 
-<pre><code>Model: &quot;sequential_1&quot;
-_________________________________________________________________
-Layer (type)                 Output Shape              Param #   
-=================================================================
-flatten (Flatten)            (None, 784)               0         
-_________________________________________________________________
-dense_1 (Dense)              (None, 128)               100480    
-_________________________________________________________________
-dense_2 (Dense)              (None, 10)                1290      
-=================================================================
-Total params: 101,770
-Trainable params: 101,770
-Non-trainable params: 0
-_________________________________________________________________
+<pre><code>Model: &quot;sequential_1&quot;_________________________________________________________________Layer (type)                 Output Shape              Param #   =================================================================flatten (Flatten)            (None, 784)               0         _________________________________________________________________dense_1 (Dense)              (None, 128)               100480    _________________________________________________________________dense_2 (Dense)              (None, 10)                1290      =================================================================Total params: 101,770Trainable params: 101,770Non-trainable params: 0_________________________________________________________________
 </code></pre>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">train_images_scaled = train_images/<span class="number">255</span></span><br><span class="line">model.<span class="built_in">compile</span>(optimizer=tf.optimizers.Adam(), loss=tf.losses.sparse_categorical_crossentropy, metrics=[<span class="string">&#x27;accuracy&#x27;</span>])</span><br><span class="line">model.fit(train_images_scaled, train_labels, epochs=<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">train_images_scaled = train_images/255model.<span class="built_in">compile</span>(optimizer=tf.optimizers.Adam(), loss=tf.losses.sparse_categorical_crossentropy, metrics=[<span class="string">&#x27;accuracy&#x27;</span>])model.fit(train_images_scaled, train_labels, epochs=<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
 
-<pre><code>Epoch 1/5
-1875/1875 [==============================] - 3s 1ms/step - loss: 0.4999 - accuracy: 0.8226
-Epoch 2/5
-1875/1875 [==============================] - 3s 1ms/step - loss: 0.3757 - accuracy: 0.8647
-Epoch 3/5
-1875/1875 [==============================] - 3s 2ms/step - loss: 0.3377 - accuracy: 0.8763
-Epoch 4/5
-1875/1875 [==============================] - 3s 1ms/step - loss: 0.3128 - accuracy: 0.8852
-Epoch 5/5
-1875/1875 [==============================] - 3s 1ms/step - loss: 0.2946 - accuracy: 0.8919
+<pre><code>Epoch 1/51875/1875 [==============================] - 3s 1ms/step - loss: 0.4999 - accuracy: 0.8226Epoch 2/51875/1875 [==============================] - 3s 1ms/step - loss: 0.3757 - accuracy: 0.8647Epoch 3/51875/1875 [==============================] - 3s 2ms/step - loss: 0.3377 - accuracy: 0.8763Epoch 4/51875/1875 [==============================] - 3s 1ms/step - loss: 0.3128 - accuracy: 0.8852Epoch 5/51875/1875 [==============================] - 3s 1ms/step - loss: 0.2946 - accuracy: 0.8919
 
 
 
@@ -2290,7 +2313,7 @@ Epoch 5/5
 
 &lt;tensorflow.python.keras.callbacks.History at 0x2d876229df0&gt;
 </code></pre>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">test_images_scaled = test_images/<span class="number">255</span></span><br><span class="line">model.evaluate(test_images_scaled, test_labels)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">test_images_scaled = test_images/255model.evaluate(test_images_scaled, test_labels)</span><br></pre></td></tr></table></figure>
 
 <pre><code>313/313 [==============================] - 0s 2ms/step - loss: 0.3464 - accuracy: 0.8770
 
@@ -2301,7 +2324,7 @@ Epoch 5/5
 [0.346446692943573, 0.8769999742507935]
 </code></pre>
 <p><img src="attachment:4649135c-d44b-4e4d-9d72-a7fd1f892fbd.png" alt="image.png"></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">np.argmax(model.predict((test_images[<span class="number">0</span>]/<span class="number">255</span>).reshape(<span class="number">1</span>,<span class="number">28</span>,<span class="number">28</span>,<span class="number">1</span>)))        </span><br><span class="line"><span class="comment"># model.predict([[test_images[0]/255]])报错了</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> npnp.argmax(model.predict((test_images[<span class="number">0</span>]/<span class="number">255</span>).reshape(<span class="number">1</span>,<span class="number">28</span>,<span class="number">28</span>,<span class="number">1</span>)))        <span class="comment"># model.predict([[test_images[0]/255]])报错了</span></span><br></pre></td></tr></table></figure>
 
 
 
@@ -2312,7 +2335,7 @@ Epoch 5/5
 
 <pre><code>9
 </code></pre>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">plt.imshow(training_images_scaled[<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> pltplt.imshow(training_images_scaled[<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
 
 
 
@@ -2323,14 +2346,9 @@ Epoch 5/5
     
 
 
-<h5 id="callback函数，自动终止训练"><a href="#callback函数，自动终止训练" class="headerlink" title="callback函数，自动终止训练"></a>callback函数，自动终止训练</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">myCallback</span>(<span class="params">tf.keras.callbacks.Callback</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">on_epoch_end</span>(<span class="params">self,epoch,logs=&#123;&#125;</span>):</span></span><br><span class="line">        <span class="keyword">if</span>(logs.get(<span class="string">&#x27;loss&#x27;</span>)&lt;<span class="number">0.4</span>):</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;\nLoss is low so cancelling training!&quot;</span>)</span><br><span class="line">            self.model.stop_training = <span class="literal">True</span></span><br><span class="line">            </span><br><span class="line">callbacks = myCallback()</span><br><span class="line">mnist = tf.keras.datasets.fashion_mnist</span><br><span class="line">(training_images,training_labels),(test_images,test_labels) = mnist.load_data()</span><br><span class="line">training_images_scaled = train_images/<span class="number">255.0</span></span><br><span class="line">test_images_scaled = test_images/<span class="number">255.0</span></span><br><span class="line">model = tf.keras.models.Sequential([</span><br><span class="line">    tf.keras.layers.Flatten(),</span><br><span class="line">    tf.keras.layers.Dense(<span class="number">512</span>,activation=tf.nn.relu),</span><br><span class="line">    tf.keras.layers.Dense(<span class="number">10</span>,activation=tf.nn.softmax)</span><br><span class="line">])</span><br><span class="line"></span><br><span class="line">model.<span class="built_in">compile</span>(optimizer=<span class="string">&#x27;adam&#x27;</span>,loss=<span class="string">&#x27;sparse_categorical_crossentropy&#x27;</span>)</span><br><span class="line">model.fit(training_images_scaled,training_labels,epochs=<span class="number">5</span>,callbacks=[callbacks])</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5 id="callback函数，自动终止训练"><a href="#callback函数，自动终止训练" class="headerlink" title="callback函数，自动终止训练"></a>callback函数，自动终止训练</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">myCallback</span>(<span class="params">tf.keras.callbacks.Callback</span>):</span>    <span class="function"><span class="keyword">def</span> <span class="title">on_epoch_end</span>(<span class="params">self,epoch,logs=&#123;&#125;</span>):</span>        <span class="keyword">if</span>(logs.get(<span class="string">&#x27;loss&#x27;</span>)&lt;<span class="number">0.4</span>):            <span class="built_in">print</span>(<span class="string">&quot;\nLoss is low so cancelling training!&quot;</span>)            self.model.stop_training = <span class="literal">True</span>            callbacks = myCallback()mnist = tf.keras.datasets.fashion_mnist(training_images,training_labels),(test_images,test_labels) = mnist.load_data()training_images_scaled = train_images/<span class="number">255.0</span>test_images_scaled = test_images/<span class="number">255.0</span>model = tf.keras.models.Sequential([    tf.keras.layers.Flatten(),    tf.keras.layers.Dense(<span class="number">512</span>,activation=tf.nn.relu),    tf.keras.layers.Dense(<span class="number">10</span>,activation=tf.nn.softmax)])model.<span class="built_in">compile</span>(optimizer=<span class="string">&#x27;adam&#x27;</span>,loss=<span class="string">&#x27;sparse_categorical_crossentropy&#x27;</span>)model.fit(training_images_scaled,training_labels,epochs=<span class="number">5</span>,callbacks=[callbacks])</span><br></pre></td></tr></table></figure>
 
-<pre><code>Epoch 1/5
-1875/1875 [==============================] - 3s 1ms/step - loss: 0.4722
-Epoch 2/5
-1863/1875 [============================&gt;.] - ETA: 0s - loss: 0.3579
-Loss is low so cancelling training!
-1875/1875 [==============================] - 3s 1ms/step - loss: 0.3576
+<pre><code>Epoch 1/51875/1875 [==============================] - 3s 1ms/step - loss: 0.4722Epoch 2/51863/1875 [============================&gt;.] - ETA: 0s - loss: 0.3579Loss is low so cancelling training!1875/1875 [==============================] - 3s 1ms/step - loss: 0.3576
 
 
 
@@ -2339,18 +2357,9 @@ Loss is low so cancelling training!
 &lt;tensorflow.python.keras.callbacks.History at 0x2d8770f4640&gt;
 </code></pre>
 <h2 id="卷积神经网络"><a href="#卷积神经网络" class="headerlink" title="卷积神经网络"></a>卷积神经网络</h2><p>CNN-Convolution Neural Network</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"><span class="keyword">from</span> tensorflow <span class="keyword">import</span> keras</span><br><span class="line">fashion_mnist = keras.datasets.fashion_mnist</span><br><span class="line">(train_images,train_labels),(test_images,test_labels) = fashion_mnist.load_data()</span><br><span class="line"></span><br><span class="line">model = keras.Sequential()</span><br><span class="line">model.add(keras.layers.Conv2D(<span class="number">64</span>,(<span class="number">3</span>,<span class="number">3</span>),activation=<span class="string">&#x27;relu&#x27;</span>,input_shape=(<span class="number">28</span>,<span class="number">28</span>,<span class="number">1</span>)))</span><br><span class="line">model.add(keras.layers.MaxPooling2D(<span class="number">2</span>,<span class="number">2</span>))</span><br><span class="line">model.add(keras.layers.Conv2D(<span class="number">64</span>,(<span class="number">3</span>,<span class="number">3</span>),activation=<span class="string">&#x27;relu&#x27;</span>))</span><br><span class="line">model.add(keras.layers.MaxPooling2D(<span class="number">2</span>,<span class="number">2</span>))</span><br><span class="line"></span><br><span class="line">model.add(keras.layers.Flatten())      </span><br><span class="line">model.add(keras.layers.Dense(<span class="number">128</span>,activation=tf.nn.relu))   </span><br><span class="line">model.add(keras.layers.Dense(<span class="number">10</span>,activation=tf.nn.softmax))   </span><br><span class="line"></span><br><span class="line">train_images_scaled = train_images/<span class="number">255</span></span><br><span class="line"></span><br><span class="line">model.<span class="built_in">compile</span>(optimizer=tf.optimizers.Adam(), loss=tf.losses.sparse_categorical_crossentropy, metrics=[<span class="string">&#x27;accuracy&#x27;</span>])</span><br><span class="line">model.fit(train_images_scaled.reshape(-<span class="number">1</span>,<span class="number">28</span>,<span class="number">28</span>,<span class="number">1</span>), train_labels, epochs=<span class="number">5</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tffrom tensorflow <span class="keyword">import</span> kerasfashion_mnist = keras.datasets.fashion_mnist(train_images,train_labels),(test_images,test_labels) = fashion_mnist.load_data()model = keras.Sequential()model.add(keras.layers.Conv2D(<span class="number">64</span>,(<span class="number">3</span>,<span class="number">3</span>),activation=<span class="string">&#x27;relu&#x27;</span>,input_shape=(<span class="number">28</span>,<span class="number">28</span>,<span class="number">1</span>)))model.add(keras.layers.MaxPooling2D(<span class="number">2</span>,<span class="number">2</span>))model.add(keras.layers.Conv2D(<span class="number">64</span>,(<span class="number">3</span>,<span class="number">3</span>),activation=<span class="string">&#x27;relu&#x27;</span>))model.add(keras.layers.MaxPooling2D(<span class="number">2</span>,<span class="number">2</span>))model.add(keras.layers.Flatten())      model.add(keras.layers.Dense(<span class="number">128</span>,activation=tf.nn.relu))   model.add(keras.layers.Dense(<span class="number">10</span>,activation=tf.nn.softmax))   train_images_scaled = train_images/255model.<span class="built_in">compile</span>(optimizer=tf.optimizers.Adam(), loss=tf.losses.sparse_categorical_crossentropy, metrics=[<span class="string">&#x27;accuracy&#x27;</span>])model.fit(train_images_scaled.reshape(-<span class="number">1</span>,<span class="number">28</span>,<span class="number">28</span>,<span class="number">1</span>), train_labels, epochs=<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
 
-<pre><code>Epoch 1/5
-1875/1875 [==============================] - 4s 2ms/step - loss: 0.4367 - accuracy: 0.8416
-Epoch 2/5
-1875/1875 [==============================] - 4s 2ms/step - loss: 0.2922 - accuracy: 0.8912
-Epoch 3/5
-1875/1875 [==============================] - 4s 2ms/step - loss: 0.2474 - accuracy: 0.9090
-Epoch 4/5
-1875/1875 [==============================] - 4s 2ms/step - loss: 0.2184 - accuracy: 0.9193
-Epoch 5/5
-1875/1875 [==============================] - 4s 2ms/step - loss: 0.1914 - accuracy: 0.9281
+<pre><code>Epoch 1/51875/1875 [==============================] - 4s 2ms/step - loss: 0.4367 - accuracy: 0.8416Epoch 2/51875/1875 [==============================] - 4s 2ms/step - loss: 0.2922 - accuracy: 0.8912Epoch 3/51875/1875 [==============================] - 4s 2ms/step - loss: 0.2474 - accuracy: 0.9090Epoch 4/51875/1875 [==============================] - 4s 2ms/step - loss: 0.2184 - accuracy: 0.9193Epoch 5/51875/1875 [==============================] - 4s 2ms/step - loss: 0.1914 - accuracy: 0.9281
 
 
 
@@ -2358,7 +2367,7 @@ Epoch 5/5
 
 &lt;tensorflow.python.keras.callbacks.History at 0x20c0ebeac40&gt;
 </code></pre>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">test_images_scaled = test_images/<span class="number">255</span></span><br><span class="line">model.evaluate(test_images_scaled.reshape(-<span class="number">1</span>,<span class="number">28</span>,<span class="number">28</span>,<span class="number">1</span>), test_labels)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">test_images_scaled = test_images/255model.evaluate(test_images_scaled.reshape(-<span class="number">1</span>,<span class="number">28</span>,<span class="number">28</span>,<span class="number">1</span>), test_labels)</span><br></pre></td></tr></table></figure>
 
 <pre><code>313/313 [==============================] - 1s 2ms/step - loss: 0.2646 - accuracy: 0.9056
 
@@ -2370,30 +2379,9 @@ Epoch 5/5
 </code></pre>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">model.summary()</span><br></pre></td></tr></table></figure>
 
-<pre><code>Model: &quot;sequential&quot;
-_________________________________________________________________
-Layer (type)                 Output Shape              Param #   
-=================================================================
-conv2d (Conv2D)              (None, 26, 26, 64)        640       
-_________________________________________________________________
-max_pooling2d (MaxPooling2D) (None, 13, 13, 64)        0         
-_________________________________________________________________
-conv2d_1 (Conv2D)            (None, 11, 11, 64)        36928     
-_________________________________________________________________
-max_pooling2d_1 (MaxPooling2 (None, 5, 5, 64)          0         
-_________________________________________________________________
-flatten (Flatten)            (None, 1600)              0         
-_________________________________________________________________
-dense (Dense)                (None, 128)               204928    
-_________________________________________________________________
-dense_1 (Dense)              (None, 10)                1290      
-=================================================================
-Total params: 243,786
-Trainable params: 243,786
-Non-trainable params: 0
-_________________________________________________________________
+<pre><code>Model: &quot;sequential&quot;_________________________________________________________________Layer (type)                 Output Shape              Param #   =================================================================conv2d (Conv2D)              (None, 26, 26, 64)        640       _________________________________________________________________max_pooling2d (MaxPooling2D) (None, 13, 13, 64)        0         _________________________________________________________________conv2d_1 (Conv2D)            (None, 11, 11, 64)        36928     _________________________________________________________________max_pooling2d_1 (MaxPooling2 (None, 5, 5, 64)          0         _________________________________________________________________flatten (Flatten)            (None, 1600)              0         _________________________________________________________________dense (Dense)                (None, 128)               204928    _________________________________________________________________dense_1 (Dense)              (None, 10)                1290      =================================================================Total params: 243,786Trainable params: 243,786Non-trainable params: 0_________________________________________________________________
 </code></pre>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># import matplotlib.pyplot as plt</span></span><br><span class="line">layer_outputs = [layer.output <span class="keyword">for</span> layer <span class="keyword">in</span> model.layers]</span><br><span class="line">activation_model = tf.keras.models.Model(inputs = model.<span class="built_in">input</span>, outputs = layer_outputs)</span><br><span class="line">pred = activation_model.predict(test_images[<span class="number">0</span>].reshape(<span class="number">1</span>,<span class="number">28</span>,<span class="number">28</span>,<span class="number">1</span>))</span><br><span class="line"><span class="comment"># pred</span></span><br><span class="line"><span class="built_in">len</span>(pred)</span><br><span class="line"><span class="comment"># plt.imshow(pred[0][0,:,:,1])    </span></span><br><span class="line">plt.imshow(pred[<span class="number">0</span>][<span class="number">0</span>,:,:,<span class="number">35</span>])</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># import matplotlib.pyplot as pltlayer_outputs = [layer.output for layer in model.layers]activation_model = tf.keras.models.Model(inputs = model.input, outputs = layer_outputs)pred = activation_model.predict(test_images[0].reshape(1,28,28,1))# predlen(pred)# plt.imshow(pred[0][0,:,:,1])    plt.imshow(pred[0][0,:,:,35])</span></span><br></pre></td></tr></table></figure>
 
 <pre><code>WARNING:tensorflow:11 out of the last 11 calls to &lt;function Model.make_predict_function.&lt;locals&gt;.predict_function at 0x0000020D87F0D310&gt; triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
 
@@ -2410,160 +2398,36 @@ _________________________________________________________________
 <h3 id="下载数据"><a href="#下载数据" class="headerlink" title="下载数据"></a>下载数据</h3><ul>
 <li>把下载好的训练图片变成可用于神经元网络训练的数据：ImageDataGenerator</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> tensorflow.keras.preprocessing.image <span class="keyword">import</span> ImageDataGenerator</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建两个数据生成器，指定scaling范围0-1</span></span><br><span class="line">train_datagen = ImageDataGenerator(rescale=<span class="number">1</span>/<span class="number">255</span>)</span><br><span class="line">validation_datagen = ImageDataGenerator(rescale=<span class="number">1</span>/<span class="number">255</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 指向训练数据文件夹</span></span><br><span class="line">train_generator = train_datagen.flow_from_directory(<span class="string">r&#x27;W:\workspaces\Jupyter\dataset\horse-or-human\horse-or-human&#x27;</span>,   <span class="comment"># 训练数据所在文件夹</span></span><br><span class="line">                                                   target_size=(<span class="number">300</span>,<span class="number">300</span>),        <span class="comment"># 指定输出尺寸</span></span><br><span class="line">                                                   batch_size=<span class="number">32</span>,</span><br><span class="line">                                                   class_mode=<span class="string">&#x27;binary&#x27;</span>)           <span class="comment"># 指定二分类</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 指向测试数据文件夹</span></span><br><span class="line">validation_generator = train_datagen.flow_from_directory(<span class="string">r&#x27;W:\workspaces\Jupyter\dataset\horse-or-human\validation-horse-or-human&#x27;</span>,   <span class="comment"># 训练数据所在文件夹</span></span><br><span class="line">                                                   target_size=(<span class="number">300</span>,<span class="number">300</span>),        <span class="comment"># 指定输出尺寸</span></span><br><span class="line">                                                   batch_size=<span class="number">32</span>,</span><br><span class="line">                                                   class_mode=<span class="string">&#x27;binary&#x27;</span>)           <span class="comment"># 指定二分类</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> tensorflow.keras.preprocessing.image <span class="keyword">import</span> ImageDataGenerator<span class="comment"># 创建两个数据生成器，指定scaling范围0-1train_datagen = ImageDataGenerator(rescale=1/255)validation_datagen = ImageDataGenerator(rescale=1/255)# 指向训练数据文件夹train_generator = train_datagen.flow_from_directory(r&#x27;W:\workspaces\Jupyter\dataset\horse-or-human\horse-or-human&#x27;,   # 训练数据所在文件夹                                                   target_size=(300,300),        # 指定输出尺寸                                                   batch_size=32,                                                   class_mode=&#x27;binary&#x27;)           # 指定二分类# 指向测试数据文件夹validation_generator = train_datagen.flow_from_directory(r&#x27;W:\workspaces\Jupyter\dataset\horse-or-human\validation-horse-or-human&#x27;,   # 训练数据所在文件夹                                                   target_size=(300,300),        # 指定输出尺寸                                                   batch_size=32,                                                   class_mode=&#x27;binary&#x27;)           # 指定二分类</span></span><br></pre></td></tr></table></figure>
 
-<pre><code>Found 1027 images belonging to 2 classes.
-Found 256 images belonging to 2 classes.
+<pre><code>Found 1027 images belonging to 2 classes.Found 256 images belonging to 2 classes.
 </code></pre>
-<h3 id="构建并训练模型"><a href="#构建并训练模型" class="headerlink" title="构建并训练模型"></a>构建并训练模型</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line">model = tf.keras.models.Sequential([</span><br><span class="line">    tf.keras.layers.Conv2D(<span class="number">16</span>, (<span class="number">3</span>,<span class="number">3</span>), activation=<span class="string">&#x27;relu&#x27;</span>,</span><br><span class="line">                          input_shape=(<span class="number">300</span>,<span class="number">300</span>,<span class="number">3</span>)),</span><br><span class="line">    tf.keras.layers.MaxPooling2D(<span class="number">2</span>,<span class="number">2</span>),</span><br><span class="line">    tf.keras.layers.Conv2D(<span class="number">32</span>, (<span class="number">3</span>,<span class="number">3</span>), activation=<span class="string">&#x27;relu&#x27;</span>),</span><br><span class="line">    tf.keras.layers.MaxPooling2D(<span class="number">2</span>,<span class="number">2</span>),</span><br><span class="line">    tf.keras.layers.Conv2D(<span class="number">64</span>, (<span class="number">3</span>,<span class="number">3</span>), activation=<span class="string">&#x27;relu&#x27;</span>),</span><br><span class="line">    tf.keras.layers.MaxPooling2D(<span class="number">2</span>,<span class="number">2</span>),</span><br><span class="line">    </span><br><span class="line">    tf.keras.layers.Flatten(),</span><br><span class="line">    tf.keras.layers.Dense(<span class="number">512</span>, activation=<span class="string">&#x27;relu&#x27;</span>),</span><br><span class="line">    tf.keras.layers.Dense(<span class="number">1</span>, activation=<span class="string">&#x27;sigmoid&#x27;</span>)     <span class="comment">#二分类用‘sigmoid’;如果是多分类的话就用‘softmax’</span></span><br><span class="line">])</span><br></pre></td></tr></table></figure>
+<h3 id="构建并训练模型"><a href="#构建并训练模型" class="headerlink" title="构建并训练模型"></a>构建并训练模型</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tfmodel = tf.keras.models.Sequential([    tf.keras.layers.Conv2D(<span class="number">16</span>, (<span class="number">3</span>,<span class="number">3</span>), activation=<span class="string">&#x27;relu&#x27;</span>,                          input_shape=(<span class="number">300</span>,<span class="number">300</span>,<span class="number">3</span>)),    tf.keras.layers.MaxPooling2D(<span class="number">2</span>,<span class="number">2</span>),    tf.keras.layers.Conv2D(<span class="number">32</span>, (<span class="number">3</span>,<span class="number">3</span>), activation=<span class="string">&#x27;relu&#x27;</span>),    tf.keras.layers.MaxPooling2D(<span class="number">2</span>,<span class="number">2</span>),    tf.keras.layers.Conv2D(<span class="number">64</span>, (<span class="number">3</span>,<span class="number">3</span>), activation=<span class="string">&#x27;relu&#x27;</span>),    tf.keras.layers.MaxPooling2D(<span class="number">2</span>,<span class="number">2</span>),        tf.keras.layers.Flatten(),    tf.keras.layers.Dense(<span class="number">512</span>, activation=<span class="string">&#x27;relu&#x27;</span>),    tf.keras.layers.Dense(<span class="number">1</span>, activation=<span class="string">&#x27;sigmoid&#x27;</span>)     <span class="comment">#二分类用‘sigmoid’;如果是多分类的话就用‘softmax’])</span></span><br></pre></td></tr></table></figure>
 
-<pre><code>Model: &quot;sequential&quot;
-_________________________________________________________________
-Layer (type)                 Output Shape              Param #   
-=================================================================
-conv2d (Conv2D)              (None, 298, 298, 16)      448       
-_________________________________________________________________
-max_pooling2d (MaxPooling2D) (None, 149, 149, 16)      0         
-_________________________________________________________________
-conv2d_1 (Conv2D)            (None, 147, 147, 32)      4640      
-_________________________________________________________________
-max_pooling2d_1 (MaxPooling2 (None, 73, 73, 32)        0         
-_________________________________________________________________
-conv2d_2 (Conv2D)            (None, 71, 71, 64)        18496     
-_________________________________________________________________
-max_pooling2d_2 (MaxPooling2 (None, 35, 35, 64)        0         
-_________________________________________________________________
-flatten (Flatten)            (None, 78400)             0         
-_________________________________________________________________
-dense (Dense)                (None, 512)               40141312  
-_________________________________________________________________
-dense_1 (Dense)              (None, 1)                 513       
-=================================================================
-Total params: 40,165,409
-Trainable params: 40,165,409
-Non-trainable params: 0
-_________________________________________________________________
+<pre><code>Model: &quot;sequential&quot;_________________________________________________________________Layer (type)                 Output Shape              Param #   =================================================================conv2d (Conv2D)              (None, 298, 298, 16)      448       _________________________________________________________________max_pooling2d (MaxPooling2D) (None, 149, 149, 16)      0         _________________________________________________________________conv2d_1 (Conv2D)            (None, 147, 147, 32)      4640      _________________________________________________________________max_pooling2d_1 (MaxPooling2 (None, 73, 73, 32)        0         _________________________________________________________________conv2d_2 (Conv2D)            (None, 71, 71, 64)        18496     _________________________________________________________________max_pooling2d_2 (MaxPooling2 (None, 35, 35, 64)        0         _________________________________________________________________flatten (Flatten)            (None, 78400)             0         _________________________________________________________________dense (Dense)                (None, 512)               40141312  _________________________________________________________________dense_1 (Dense)              (None, 1)                 513       =================================================================Total params: 40,165,409Trainable params: 40,165,409Non-trainable params: 0_________________________________________________________________
 </code></pre>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> tensorflow.keras.optimizers <span class="keyword">import</span> RMSprop</span><br><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"></span><br><span class="line">model = tf.keras.models.Sequential([</span><br><span class="line">    tf.keras.layers.Conv2D(<span class="number">16</span>, (<span class="number">3</span>,<span class="number">3</span>), activation=<span class="string">&#x27;relu&#x27;</span>,</span><br><span class="line">                          input_shape=(<span class="number">300</span>,<span class="number">300</span>,<span class="number">3</span>)),</span><br><span class="line">    tf.keras.layers.MaxPooling2D(<span class="number">2</span>,<span class="number">2</span>),</span><br><span class="line">    tf.keras.layers.Conv2D(<span class="number">32</span>, (<span class="number">3</span>,<span class="number">3</span>), activation=<span class="string">&#x27;relu&#x27;</span>),</span><br><span class="line">    tf.keras.layers.MaxPooling2D(<span class="number">2</span>,<span class="number">2</span>),</span><br><span class="line">    tf.keras.layers.Conv2D(<span class="number">64</span>, (<span class="number">3</span>,<span class="number">3</span>), activation=<span class="string">&#x27;relu&#x27;</span>),</span><br><span class="line">    tf.keras.layers.MaxPooling2D(<span class="number">2</span>,<span class="number">2</span>),</span><br><span class="line">    </span><br><span class="line">    tf.keras.layers.Flatten(),</span><br><span class="line">    tf.keras.layers.Dense(<span class="number">512</span>, activation=<span class="string">&#x27;relu&#x27;</span>),</span><br><span class="line">    tf.keras.layers.Dense(<span class="number">1</span>, activation=<span class="string">&#x27;sigmoid&#x27;</span>)     <span class="comment">#二分类用‘sigmoid’;如果是多分类的话就用‘softmax’</span></span><br><span class="line">])</span><br><span class="line">model.<span class="built_in">compile</span>(loss=<span class="string">&#x27;binary_crossentropy&#x27;</span>,</span><br><span class="line">             optimizer=RMSprop(lr=<span class="number">0.001</span>),</span><br><span class="line">             metrics=[<span class="string">&#x27;acc&#x27;</span>])</span><br><span class="line"></span><br><span class="line">history = model.fit(</span><br><span class="line">            train_generator,</span><br><span class="line">            epochs=<span class="number">15</span>,</span><br><span class="line">            verbose=<span class="number">1</span>,</span><br><span class="line">            validation_data=validation_generator,</span><br><span class="line">            validation_steps=<span class="number">8</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> tensorflow.keras.optimizers <span class="keyword">import</span> RMSpropimport tensorflow <span class="keyword">as</span> tfmodel = tf.keras.models.Sequential([    tf.keras.layers.Conv2D(<span class="number">16</span>, (<span class="number">3</span>,<span class="number">3</span>), activation=<span class="string">&#x27;relu&#x27;</span>,                          input_shape=(<span class="number">300</span>,<span class="number">300</span>,<span class="number">3</span>)),    tf.keras.layers.MaxPooling2D(<span class="number">2</span>,<span class="number">2</span>),    tf.keras.layers.Conv2D(<span class="number">32</span>, (<span class="number">3</span>,<span class="number">3</span>), activation=<span class="string">&#x27;relu&#x27;</span>),    tf.keras.layers.MaxPooling2D(<span class="number">2</span>,<span class="number">2</span>),    tf.keras.layers.Conv2D(<span class="number">64</span>, (<span class="number">3</span>,<span class="number">3</span>), activation=<span class="string">&#x27;relu&#x27;</span>),    tf.keras.layers.MaxPooling2D(<span class="number">2</span>,<span class="number">2</span>),        tf.keras.layers.Flatten(),    tf.keras.layers.Dense(<span class="number">512</span>, activation=<span class="string">&#x27;relu&#x27;</span>),    tf.keras.layers.Dense(<span class="number">1</span>, activation=<span class="string">&#x27;sigmoid&#x27;</span>)     <span class="comment">#二分类用‘sigmoid’;如果是多分类的话就用‘softmax’])model.compile(loss=&#x27;binary_crossentropy&#x27;,             optimizer=RMSprop(lr=0.001),             metrics=[&#x27;acc&#x27;])history = model.fit(            train_generator,            epochs=15,            verbose=1,            validation_data=validation_generator,            validation_steps=8)</span></span><br></pre></td></tr></table></figure>
 
-<pre><code>Epoch 1/15
- 2/33 [&gt;.............................] - ETA: 0s - loss: 6.9880 - acc: 0.5312WARNING:tensorflow:Callbacks method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0210s vs `on_train_batch_end` time: 0.0370s). Check your callbacks.
-33/33 [==============================] - 5s 162ms/step - loss: 2.4388 - acc: 0.7760 - val_loss: 1.1326 - val_acc: 0.7539
-Epoch 2/15
-33/33 [==============================] - 5s 156ms/step - loss: 0.2508 - acc: 0.9260 - val_loss: 1.3755 - val_acc: 0.8320
-Epoch 3/15
-33/33 [==============================] - 5s 156ms/step - loss: 0.3912 - acc: 0.9367 - val_loss: 1.7209 - val_acc: 0.8164
-Epoch 4/15
-33/33 [==============================] - 5s 155ms/step - loss: 0.5141 - acc: 0.9698 - val_loss: 2.4460 - val_acc: 0.7539
-Epoch 5/15
-33/33 [==============================] - 5s 155ms/step - loss: 0.0628 - acc: 0.9776 - val_loss: 4.7102 - val_acc: 0.7383
-Epoch 6/15
-33/33 [==============================] - 5s 156ms/step - loss: 0.1042 - acc: 0.9757 - val_loss: 1.7261 - val_acc: 0.8477
-Epoch 7/15
-33/33 [==============================] - 5s 158ms/step - loss: 0.0059 - acc: 0.9981 - val_loss: 6.3282 - val_acc: 0.7344
-Epoch 8/15
-33/33 [==============================] - 5s 156ms/step - loss: 0.2483 - acc: 0.9698 - val_loss: 2.8996 - val_acc: 0.8594
-Epoch 9/15
-33/33 [==============================] - 5s 156ms/step - loss: 1.7214e-04 - acc: 1.0000 - val_loss: 3.3329 - val_acc: 0.8633
-Epoch 10/15
-33/33 [==============================] - 5s 156ms/step - loss: 3.8704e-05 - acc: 1.0000 - val_loss: 3.8738 - val_acc: 0.8633
-Epoch 11/15
-33/33 [==============================] - 5s 155ms/step - loss: 7.1030e-06 - acc: 1.0000 - val_loss: 4.2647 - val_acc: 0.8594
-Epoch 12/15
-33/33 [==============================] - 5s 158ms/step - loss: 1.6017e-06 - acc: 1.0000 - val_loss: 4.6733 - val_acc: 0.8594
-Epoch 13/15
-33/33 [==============================] - 5s 156ms/step - loss: 3.4922e-07 - acc: 1.0000 - val_loss: 5.0208 - val_acc: 0.8594
-Epoch 14/15
-33/33 [==============================] - 5s 158ms/step - loss: 3.5524 - acc: 0.9844 - val_loss: 5.4657 - val_acc: 0.8047
-Epoch 15/15
-33/33 [==============================] - 5s 161ms/step - loss: 1.7611e-04 - acc: 1.0000 - val_loss: 6.1686 - val_acc: 0.7969
+<pre><code>Epoch 1/15 2/33 [&gt;.............................] - ETA: 0s - loss: 6.9880 - acc: 0.5312WARNING:tensorflow:Callbacks method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0210s vs `on_train_batch_end` time: 0.0370s). Check your callbacks.33/33 [==============================] - 5s 162ms/step - loss: 2.4388 - acc: 0.7760 - val_loss: 1.1326 - val_acc: 0.7539Epoch 2/1533/33 [==============================] - 5s 156ms/step - loss: 0.2508 - acc: 0.9260 - val_loss: 1.3755 - val_acc: 0.8320Epoch 3/1533/33 [==============================] - 5s 156ms/step - loss: 0.3912 - acc: 0.9367 - val_loss: 1.7209 - val_acc: 0.8164Epoch 4/1533/33 [==============================] - 5s 155ms/step - loss: 0.5141 - acc: 0.9698 - val_loss: 2.4460 - val_acc: 0.7539Epoch 5/1533/33 [==============================] - 5s 155ms/step - loss: 0.0628 - acc: 0.9776 - val_loss: 4.7102 - val_acc: 0.7383Epoch 6/1533/33 [==============================] - 5s 156ms/step - loss: 0.1042 - acc: 0.9757 - val_loss: 1.7261 - val_acc: 0.8477Epoch 7/1533/33 [==============================] - 5s 158ms/step - loss: 0.0059 - acc: 0.9981 - val_loss: 6.3282 - val_acc: 0.7344Epoch 8/1533/33 [==============================] - 5s 156ms/step - loss: 0.2483 - acc: 0.9698 - val_loss: 2.8996 - val_acc: 0.8594Epoch 9/1533/33 [==============================] - 5s 156ms/step - loss: 1.7214e-04 - acc: 1.0000 - val_loss: 3.3329 - val_acc: 0.8633Epoch 10/1533/33 [==============================] - 5s 156ms/step - loss: 3.8704e-05 - acc: 1.0000 - val_loss: 3.8738 - val_acc: 0.8633Epoch 11/1533/33 [==============================] - 5s 155ms/step - loss: 7.1030e-06 - acc: 1.0000 - val_loss: 4.2647 - val_acc: 0.8594Epoch 12/1533/33 [==============================] - 5s 158ms/step - loss: 1.6017e-06 - acc: 1.0000 - val_loss: 4.6733 - val_acc: 0.8594Epoch 13/1533/33 [==============================] - 5s 156ms/step - loss: 3.4922e-07 - acc: 1.0000 - val_loss: 5.0208 - val_acc: 0.8594Epoch 14/1533/33 [==============================] - 5s 158ms/step - loss: 3.5524 - acc: 0.9844 - val_loss: 5.4657 - val_acc: 0.8047Epoch 15/1533/33 [==============================] - 5s 161ms/step - loss: 1.7611e-04 - acc: 1.0000 - val_loss: 6.1686 - val_acc: 0.7969
 </code></pre>
 <h3 id="优化模型参数"><a href="#优化模型参数" class="headerlink" title="优化模型参数"></a>优化模型参数</h3><ul>
 <li>KerasTuner</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> tensorflow.keras.preprocessing.image <span class="keyword">import</span> ImageDataGenerator</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建两个数据生成器，指定scaling范围0-1</span></span><br><span class="line">train_datagen = ImageDataGenerator(rescale=<span class="number">1</span>/<span class="number">255</span>)</span><br><span class="line">validation_datagen = ImageDataGenerator(rescale=<span class="number">1</span>/<span class="number">255</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 指向训练数据文件夹</span></span><br><span class="line">train_generator = train_datagen.flow_from_directory(<span class="string">r&#x27;W:\workspaces\Jupyter\dataset\horse-or-human\horse-or-human&#x27;</span>,   <span class="comment"># 训练数据所在文件夹</span></span><br><span class="line">                                                   target_size=(<span class="number">300</span>,<span class="number">300</span>),        <span class="comment"># 指定输出尺寸</span></span><br><span class="line">                                                   batch_size=<span class="number">32</span>,</span><br><span class="line">                                                   class_mode=<span class="string">&#x27;binary&#x27;</span>)           <span class="comment"># 指定二分类</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 指向测试数据文件夹</span></span><br><span class="line">validation_generator = train_datagen.flow_from_directory(<span class="string">r&#x27;W:\workspaces\Jupyter\dataset\horse-or-human\validation-horse-or-human&#x27;</span>,   <span class="comment"># 训练数据所在文件夹</span></span><br><span class="line">                                                   target_size=(<span class="number">300</span>,<span class="number">300</span>),        <span class="comment"># 指定输出尺寸</span></span><br><span class="line">                                                   batch_size=<span class="number">32</span>,</span><br><span class="line">                                                   class_mode=<span class="string">&#x27;binary&#x27;</span>)           <span class="comment"># 指定二分类</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> keras_tuner.tuners <span class="keyword">import</span> Hyperband</span><br><span class="line"><span class="keyword">from</span> kerastuner.engine.hyperparameters <span class="keyword">import</span> HyperParameters</span><br><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"><span class="keyword">from</span> tensorflow.keras.optimizers <span class="keyword">import</span> RMSprop</span><br><span class="line"></span><br><span class="line">hp = HyperParameters()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">build_model</span>(<span class="params">hp</span>):</span></span><br><span class="line">    model = tf.keras.models.Sequential()</span><br><span class="line">    model.add(tf.keras.layers.Conv2D(hp.Choice(<span class="string">&#x27;num_filters_layer0&#x27;</span>,values=[<span class="number">16</span>,<span class="number">64</span>],default=<span class="number">16</span>), (<span class="number">3</span>,<span class="number">3</span>), </span><br><span class="line">                                     activation=<span class="string">&#x27;relu&#x27;</span>, input_shape=(<span class="number">300</span>,<span class="number">300</span>,<span class="number">3</span>)))</span><br><span class="line">    model.add(tf.keras.layers.MaxPooling2D(<span class="number">2</span>,<span class="number">2</span>))</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(hp.Int(<span class="string">&quot;num_conv_layers&quot;</span>,<span class="number">1</span>,<span class="number">3</span>)):</span><br><span class="line">        model.add(tf.keras.layers.Conv2D(hp.Choice(<span class="string">f&#x27;num_filters_layer<span class="subst">&#123;i&#125;</span>&#x27;</span>,values=[<span class="number">16</span>,<span class="number">64</span>],default=<span class="number">16</span>), (<span class="number">3</span>,<span class="number">3</span>),</span><br><span class="line">                                         activation=<span class="string">&#x27;relu&#x27;</span>))</span><br><span class="line">        model.add(tf.keras.layers.MaxPooling2D(<span class="number">2</span>,<span class="number">2</span>))</span><br><span class="line">        </span><br><span class="line">    model.add(tf.keras.layers.Conv2D(<span class="number">64</span>, (<span class="number">3</span>,<span class="number">3</span>), activation=<span class="string">&#x27;relu&#x27;</span>))</span><br><span class="line">    model.add(tf.keras.layers.MaxPooling2D(<span class="number">2</span>,<span class="number">2</span>))    </span><br><span class="line">    model.add(tf.keras.layers.Flatten())</span><br><span class="line">    model.add(tf.keras.layers.Dense(hp.Int(<span class="string">&quot;hidden_units&quot;</span>,<span class="number">128</span>,<span class="number">512</span>,step=<span class="number">32</span>), activation=<span class="string">&#x27;relu&#x27;</span>))</span><br><span class="line">    model.add(tf.keras.layers.Dense(<span class="number">1</span>, activation=<span class="string">&#x27;sigmoid&#x27;</span>))    <span class="comment">#二分类用‘sigmoid’;如果是多分类的话就用‘softmax’</span></span><br><span class="line">    model.<span class="built_in">compile</span>(loss=<span class="string">&#x27;binary_crossentropy&#x27;</span>, optimizer=RMSprop(lr=<span class="number">0.001</span>), metrics=[<span class="string">&#x27;acc&#x27;</span>])    <span class="comment"># &#x27;lr&#x27;:learning rate</span></span><br><span class="line">    <span class="keyword">return</span> model</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">tuner = Hyperband(</span><br><span class="line">    build_model,</span><br><span class="line">    objective=<span class="string">&#x27;val_acc&#x27;</span>,</span><br><span class="line">    max_epochs=<span class="number">15</span>,</span><br><span class="line">    directory=<span class="string">&#x27;horse_human_params&#x27;</span>,</span><br><span class="line">    hyperparameters=hp,</span><br><span class="line">    project_name=<span class="string">&#x27;my_horse_human_project&#x27;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">tuner.search(train_generator, epochs=<span class="number">10</span>, validation_data=validation_generator)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> tensorflow.keras.preprocessing.image <span class="keyword">import</span> ImageDataGenerator<span class="comment"># 创建两个数据生成器，指定scaling范围0-1train_datagen = ImageDataGenerator(rescale=1/255)validation_datagen = ImageDataGenerator(rescale=1/255)# 指向训练数据文件夹train_generator = train_datagen.flow_from_directory(r&#x27;W:\workspaces\Jupyter\dataset\horse-or-human\horse-or-human&#x27;,   # 训练数据所在文件夹                                                   target_size=(300,300),        # 指定输出尺寸                                                   batch_size=32,                                                   class_mode=&#x27;binary&#x27;)           # 指定二分类# 指向测试数据文件夹validation_generator = train_datagen.flow_from_directory(r&#x27;W:\workspaces\Jupyter\dataset\horse-or-human\validation-horse-or-human&#x27;,   # 训练数据所在文件夹                                                   target_size=(300,300),        # 指定输出尺寸                                                   batch_size=32,                                                   class_mode=&#x27;binary&#x27;)           # 指定二分类from keras_tuner.tuners import Hyperbandfrom kerastuner.engine.hyperparameters import HyperParametersimport tensorflow as tffrom tensorflow.keras.optimizers import RMSprophp = HyperParameters()def build_model(hp):    model = tf.keras.models.Sequential()    model.add(tf.keras.layers.Conv2D(hp.Choice(&#x27;num_filters_layer0&#x27;,values=[16,64],default=16), (3,3),                                      activation=&#x27;relu&#x27;, input_shape=(300,300,3)))    model.add(tf.keras.layers.MaxPooling2D(2,2))        for i in range(hp.Int(&quot;num_conv_layers&quot;,1,3)):        model.add(tf.keras.layers.Conv2D(hp.Choice(f&#x27;num_filters_layer&#123;i&#125;&#x27;,values=[16,64],default=16), (3,3),                                         activation=&#x27;relu&#x27;))        model.add(tf.keras.layers.MaxPooling2D(2,2))            model.add(tf.keras.layers.Conv2D(64, (3,3), activation=&#x27;relu&#x27;))    model.add(tf.keras.layers.MaxPooling2D(2,2))        model.add(tf.keras.layers.Flatten())    model.add(tf.keras.layers.Dense(hp.Int(&quot;hidden_units&quot;,128,512,step=32), activation=&#x27;relu&#x27;))    model.add(tf.keras.layers.Dense(1, activation=&#x27;sigmoid&#x27;))    #二分类用‘sigmoid’;如果是多分类的话就用‘softmax’    model.compile(loss=&#x27;binary_crossentropy&#x27;, optimizer=RMSprop(lr=0.001), metrics=[&#x27;acc&#x27;])    # &#x27;lr&#x27;:learning rate    return modeltuner = Hyperband(    build_model,    objective=&#x27;val_acc&#x27;,    max_epochs=15,    directory=&#x27;horse_human_params&#x27;,    hyperparameters=hp,    project_name=&#x27;my_horse_human_project&#x27;)tuner.search(train_generator, epochs=10, validation_data=validation_generator)</span></span><br></pre></td></tr></table></figure>
 
-<pre><code>Trial 30 Complete [00h 01m 31s]
-val_acc: 0.90234375
-
-Best val_acc So Far: 0.93359375
-Total elapsed time: 00h 23m 41s
-INFO:tensorflow:Oracle triggered exit
+<pre><code>Trial 30 Complete [00h 01m 31s]val_acc: 0.90234375Best val_acc So Far: 0.93359375Total elapsed time: 00h 23m 41sINFO:tensorflow:Oracle triggered exit
 </code></pre>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">best_hps = tuner.get_best_hyperparameters(<span class="number">1</span>)[<span class="number">0</span>]</span><br><span class="line"><span class="built_in">print</span>(best_hps.values)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">best_hps = tuner.get_best_hyperparameters(<span class="number">1</span>)[<span class="number">0</span>]<span class="built_in">print</span>(best_hps.values)</span><br></pre></td></tr></table></figure>
 
 <pre><code>&#123;&#39;num_filters_layer0&#39;: 64, &#39;num_conv_layers&#39;: 3, &#39;hidden_units&#39;: 160, &#39;num_filters_layer1&#39;: 16, &#39;num_filters_layer2&#39;: 64, &#39;tuner/epochs&#39;: 15, &#39;tuner/initial_epoch&#39;: 0, &#39;tuner/bracket&#39;: 0, &#39;tuner/round&#39;: 0&#125;
 </code></pre>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">model = tuner.hypermodel.build(best_hps)</span><br><span class="line">model.summary()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">model = tuner.hypermodel.build(best_hps)model.summary()</span><br></pre></td></tr></table></figure>
 
-<pre><code>Model: &quot;sequential&quot;
-_________________________________________________________________
-Layer (type)                 Output Shape              Param #   
-=================================================================
-conv2d (Conv2D)              (None, 298, 298, 64)      1792      
-_________________________________________________________________
-max_pooling2d (MaxPooling2D) (None, 149, 149, 64)      0         
-_________________________________________________________________
-conv2d_1 (Conv2D)            (None, 147, 147, 64)      36928     
-_________________________________________________________________
-max_pooling2d_1 (MaxPooling2 (None, 73, 73, 64)        0         
-_________________________________________________________________
-conv2d_2 (Conv2D)            (None, 71, 71, 16)        9232      
-_________________________________________________________________
-max_pooling2d_2 (MaxPooling2 (None, 35, 35, 16)        0         
-_________________________________________________________________
-conv2d_3 (Conv2D)            (None, 33, 33, 64)        9280      
-_________________________________________________________________
-max_pooling2d_3 (MaxPooling2 (None, 16, 16, 64)        0         
-_________________________________________________________________
-conv2d_4 (Conv2D)            (None, 14, 14, 64)        36928     
-_________________________________________________________________
-max_pooling2d_4 (MaxPooling2 (None, 7, 7, 64)          0         
-_________________________________________________________________
-flatten (Flatten)            (None, 3136)              0         
-_________________________________________________________________
-dense (Dense)                (None, 160)               501920    
-_________________________________________________________________
-dense_1 (Dense)              (None, 1)                 161       
-=================================================================
-Total params: 596,241
-Trainable params: 596,241
-Non-trainable params: 0
-_________________________________________________________________
+<pre><code>Model: &quot;sequential&quot;_________________________________________________________________Layer (type)                 Output Shape              Param #   =================================================================conv2d (Conv2D)              (None, 298, 298, 64)      1792      _________________________________________________________________max_pooling2d (MaxPooling2D) (None, 149, 149, 64)      0         _________________________________________________________________conv2d_1 (Conv2D)            (None, 147, 147, 64)      36928     _________________________________________________________________max_pooling2d_1 (MaxPooling2 (None, 73, 73, 64)        0         _________________________________________________________________conv2d_2 (Conv2D)            (None, 71, 71, 16)        9232      _________________________________________________________________max_pooling2d_2 (MaxPooling2 (None, 35, 35, 16)        0         _________________________________________________________________conv2d_3 (Conv2D)            (None, 33, 33, 64)        9280      _________________________________________________________________max_pooling2d_3 (MaxPooling2 (None, 16, 16, 64)        0         _________________________________________________________________conv2d_4 (Conv2D)            (None, 14, 14, 64)        36928     _________________________________________________________________max_pooling2d_4 (MaxPooling2 (None, 7, 7, 64)          0         _________________________________________________________________flatten (Flatten)            (None, 3136)              0         _________________________________________________________________dense (Dense)                (None, 160)               501920    _________________________________________________________________dense_1 (Dense)              (None, 1)                 161       =================================================================Total params: 596,241Trainable params: 596,241Non-trainable params: 0_________________________________________________________________
 </code></pre>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> tensorflow.keras.optimizers <span class="keyword">import</span> RMSprop</span><br><span class="line">model.<span class="built_in">compile</span>(loss=<span class="string">&#x27;binary_crossentropy&#x27;</span>, optimizer=RMSprop(lr=<span class="number">0.001</span>), metrics=[<span class="string">&#x27;acc&#x27;</span>])</span><br><span class="line"></span><br><span class="line">history = model.fit(</span><br><span class="line">            train_generator,</span><br><span class="line">            epochs=<span class="number">15</span>,</span><br><span class="line">            verbose=<span class="number">1</span>,</span><br><span class="line">            validation_data=validation_generator,</span><br><span class="line">            validation_steps=<span class="number">8</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> tensorflow.keras.optimizers <span class="keyword">import</span> RMSpropmodel.<span class="built_in">compile</span>(loss=<span class="string">&#x27;binary_crossentropy&#x27;</span>, optimizer=RMSprop(lr=<span class="number">0.001</span>), metrics=[<span class="string">&#x27;acc&#x27;</span>])history = model.fit(            train_generator,            epochs=<span class="number">15</span>,            verbose=<span class="number">1</span>,            validation_data=validation_generator,            validation_steps=<span class="number">8</span>)</span><br></pre></td></tr></table></figure>
 
-<pre><code>Epoch 1/15
- 2/33 [&gt;.............................] - ETA: 3s - loss: 1.3659 - acc: 0.9062    WARNING:tensorflow:Callbacks method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0390s vs `on_train_batch_end` time: 0.0680s). Check your callbacks.
-33/33 [==============================] - 5s 163ms/step - loss: 0.2638 - acc: 0.9611 - val_loss: 1.3107 - val_acc: 0.8945
-Epoch 2/15
-33/33 [==============================] - 5s 161ms/step - loss: 0.0011 - acc: 1.0000 - val_loss: 2.7559 - val_acc: 0.8711
-Epoch 3/15
-33/33 [==============================] - 5s 158ms/step - loss: 0.2359 - acc: 0.9815 - val_loss: 1.9172 - val_acc: 0.8516
-Epoch 4/15
-33/33 [==============================] - 5s 159ms/step - loss: 9.3898e-04 - acc: 1.0000 - val_loss: 2.7427 - val_acc: 0.8594
-Epoch 5/15
-33/33 [==============================] - 5s 158ms/step - loss: 7.4358e-05 - acc: 1.0000 - val_loss: 2.9619 - val_acc: 0.8633
-Epoch 6/15
-33/33 [==============================] - 5s 158ms/step - loss: 8.6423e-06 - acc: 1.0000 - val_loss: 3.4844 - val_acc: 0.8633
-Epoch 7/15
-33/33 [==============================] - 5s 160ms/step - loss: 8.0838e-07 - acc: 1.0000 - val_loss: 3.9665 - val_acc: 0.8672
-Epoch 8/15
-33/33 [==============================] - 5s 158ms/step - loss: 6.1257e-07 - acc: 1.0000 - val_loss: 3.7611 - val_acc: 0.8984
-Epoch 9/15
-33/33 [==============================] - 5s 158ms/step - loss: 0.4301 - acc: 0.9834 - val_loss: 5.7844 - val_acc: 0.8203
-Epoch 10/15
-33/33 [==============================] - 5s 157ms/step - loss: 6.4750e-05 - acc: 1.0000 - val_loss: 5.1916 - val_acc: 0.8477
-Epoch 11/15
-33/33 [==============================] - 5s 159ms/step - loss: 2.4387e-05 - acc: 1.0000 - val_loss: 5.3038 - val_acc: 0.8477
-Epoch 12/15
-33/33 [==============================] - 5s 158ms/step - loss: 3.5591e-06 - acc: 1.0000 - val_loss: 5.2560 - val_acc: 0.8477
-Epoch 13/15
-33/33 [==============================] - 5s 158ms/step - loss: 0.3327 - acc: 0.9883 - val_loss: 3.3722 - val_acc: 0.8789
-Epoch 14/15
-33/33 [==============================] - 5s 159ms/step - loss: 9.1418e-04 - acc: 1.0000 - val_loss: 3.2942 - val_acc: 0.8789
-Epoch 15/15
-33/33 [==============================] - 5s 157ms/step - loss: 3.1600e-05 - acc: 1.0000 - val_loss: 3.4671 - val_acc: 0.8789
+<pre><code>Epoch 1/15 2/33 [&gt;.............................] - ETA: 3s - loss: 1.3659 - acc: 0.9062    WARNING:tensorflow:Callbacks method `on_train_batch_end` is slow compared to the batch time (batch time: 0.0390s vs `on_train_batch_end` time: 0.0680s). Check your callbacks.33/33 [==============================] - 5s 163ms/step - loss: 0.2638 - acc: 0.9611 - val_loss: 1.3107 - val_acc: 0.8945Epoch 2/1533/33 [==============================] - 5s 161ms/step - loss: 0.0011 - acc: 1.0000 - val_loss: 2.7559 - val_acc: 0.8711Epoch 3/1533/33 [==============================] - 5s 158ms/step - loss: 0.2359 - acc: 0.9815 - val_loss: 1.9172 - val_acc: 0.8516Epoch 4/1533/33 [==============================] - 5s 159ms/step - loss: 9.3898e-04 - acc: 1.0000 - val_loss: 2.7427 - val_acc: 0.8594Epoch 5/1533/33 [==============================] - 5s 158ms/step - loss: 7.4358e-05 - acc: 1.0000 - val_loss: 2.9619 - val_acc: 0.8633Epoch 6/1533/33 [==============================] - 5s 158ms/step - loss: 8.6423e-06 - acc: 1.0000 - val_loss: 3.4844 - val_acc: 0.8633Epoch 7/1533/33 [==============================] - 5s 160ms/step - loss: 8.0838e-07 - acc: 1.0000 - val_loss: 3.9665 - val_acc: 0.8672Epoch 8/1533/33 [==============================] - 5s 158ms/step - loss: 6.1257e-07 - acc: 1.0000 - val_loss: 3.7611 - val_acc: 0.8984Epoch 9/1533/33 [==============================] - 5s 158ms/step - loss: 0.4301 - acc: 0.9834 - val_loss: 5.7844 - val_acc: 0.8203Epoch 10/1533/33 [==============================] - 5s 157ms/step - loss: 6.4750e-05 - acc: 1.0000 - val_loss: 5.1916 - val_acc: 0.8477Epoch 11/1533/33 [==============================] - 5s 159ms/step - loss: 2.4387e-05 - acc: 1.0000 - val_loss: 5.3038 - val_acc: 0.8477Epoch 12/1533/33 [==============================] - 5s 158ms/step - loss: 3.5591e-06 - acc: 1.0000 - val_loss: 5.2560 - val_acc: 0.8477Epoch 13/1533/33 [==============================] - 5s 158ms/step - loss: 0.3327 - acc: 0.9883 - val_loss: 3.3722 - val_acc: 0.8789Epoch 14/1533/33 [==============================] - 5s 159ms/step - loss: 9.1418e-04 - acc: 1.0000 - val_loss: 3.2942 - val_acc: 0.8789Epoch 15/1533/33 [==============================] - 5s 157ms/step - loss: 3.1600e-05 - acc: 1.0000 - val_loss: 3.4671 - val_acc: 0.8789
 </code></pre>
 <h1 id="机器视觉-图像分类"><a href="#机器视觉-图像分类" class="headerlink" title="机器视觉-图像分类"></a>机器视觉-图像分类</h1><h3 id="猫狗识别"><a href="#猫狗识别" class="headerlink" title="猫狗识别"></a>猫狗识别</h3><ul>
 <li>数据预处理：图像数据处理</li>
@@ -2572,268 +2436,34 @@ Epoch 15/15
 <li>数据增强：图像数据增强方法与效果</li>
 <li>迁移学习：深度学习必备训练策略</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os </span><br><span class="line"><span class="keyword">import</span> warnings</span><br><span class="line">warnings.filterwarnings(<span class="string">&quot;ignore&quot;</span>)</span><br><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"><span class="keyword">from</span> tensorflow.keras.optimizers <span class="keyword">import</span> Adam</span><br><span class="line"><span class="keyword">from</span> tensorflow.keras.preprocessing.image <span class="keyword">import</span> ImageDataGenerator</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os <span class="keyword">import</span> warningswarnings.filterwarnings(<span class="string">&quot;ignore&quot;</span>)<span class="keyword">import</span> tensorflow <span class="keyword">as</span> tffrom tensorflow.keras.optimizers <span class="keyword">import</span> Adamfrom tensorflow.keras.preprocessing.image <span class="keyword">import</span> ImageDataGenerator</span><br></pre></td></tr></table></figure>
 
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">base_dir = <span class="string">r&#x27;W:\workspaces\Jupyter\dataset\cat_and_dog&#x27;</span></span><br><span class="line">train_dir = os.path.join(base_dir, <span class="string">&#x27;train&#x27;</span>)</span><br><span class="line">validation_dir = os.path.join(base_dir, <span class="string">&#x27;validation/&#x27;</span>)</span><br><span class="line"></span><br><span class="line">train_cats_dir = os.path.join(train_dir, <span class="string">&#x27;cats&#x27;</span>)</span><br><span class="line">train_dogs_dir = os.path.join(train_dir, <span class="string">&#x27;dogs&#x27;</span>)  </span><br><span class="line"></span><br><span class="line">validation_cats_dir = os.path.join(validation_dir, <span class="string">&#x27;cats&#x27;</span>)  </span><br><span class="line">validation_dogs_dir = os.path.join(validation_dir, <span class="string">&#x27;dogs&#x27;</span>)  </span><br><span class="line"> </span><br><span class="line"><span class="comment"># num_cats_tr = len(os.listdir(train_cats_dir))  # total training cat images: 1000</span></span><br><span class="line"><span class="comment"># num_dogs_tr = len(os.listdir(train_dogs_dir))  # total training dog images: 1000</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># num_cats_val = len(os.listdir(validation_cats_dir))  # total validation cat images: 500</span></span><br><span class="line"><span class="comment"># num_dogs_val = len(os.listdir(validation_dogs_dir))  # total validation dog images: 500</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># total_train = num_cats_tr + num_dogs_tr  # Total training images: 2000</span></span><br><span class="line"><span class="comment"># total_val = num_cats_val + num_dogs_val  # Total validation images: 1000</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">base_dir = <span class="string">r&#x27;W:\workspaces\Jupyter\dataset\cat_and_dog&#x27;</span>train_dir = os.path.join(base_dir, <span class="string">&#x27;train&#x27;</span>)validation_dir = os.path.join(base_dir, <span class="string">&#x27;validation/&#x27;</span>)train_cats_dir = os.path.join(train_dir, <span class="string">&#x27;cats&#x27;</span>)train_dogs_dir = os.path.join(train_dir, <span class="string">&#x27;dogs&#x27;</span>)  validation_cats_dir = os.path.join(validation_dir, <span class="string">&#x27;cats&#x27;</span>)  validation_dogs_dir = os.path.join(validation_dir, <span class="string">&#x27;dogs&#x27;</span>)   <span class="comment"># num_cats_tr = len(os.listdir(train_cats_dir))  # total training cat images: 1000# num_dogs_tr = len(os.listdir(train_dogs_dir))  # total training dog images: 1000 # num_cats_val = len(os.listdir(validation_cats_dir))  # total validation cat images: 500# num_dogs_val = len(os.listdir(validation_dogs_dir))  # total validation dog images: 500 # total_train = num_cats_tr + num_dogs_tr  # Total training images: 2000# total_val = num_cats_val + num_dogs_val  # Total validation images: 1000</span></span><br></pre></td></tr></table></figure>
 
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">model = tf.keras.models.Sequential()</span><br><span class="line">model.add(tf.keras.layers.Conv2D(<span class="number">32</span>, (<span class="number">3</span>,<span class="number">3</span>), activation=<span class="string">&#x27;relu&#x27;</span>, input_shape=(<span class="number">100</span>,<span class="number">100</span>,<span class="number">3</span>)))</span><br><span class="line">model.add(tf.keras.layers.MaxPooling2D(<span class="number">2</span>,<span class="number">2</span>))</span><br><span class="line"></span><br><span class="line">model.add(tf.keras.layers.Conv2D(<span class="number">64</span>, (<span class="number">3</span>,<span class="number">3</span>), activation=<span class="string">&#x27;relu&#x27;</span>))</span><br><span class="line">model.add(tf.keras.layers.MaxPooling2D(<span class="number">2</span>,<span class="number">2</span>))</span><br><span class="line"></span><br><span class="line">model.add(tf.keras.layers.Conv2D(<span class="number">64</span>, (<span class="number">3</span>,<span class="number">3</span>), activation=<span class="string">&#x27;relu&#x27;</span>))</span><br><span class="line">model.add(tf.keras.layers.MaxPooling2D(<span class="number">2</span>,<span class="number">2</span>))</span><br><span class="line"></span><br><span class="line">model.add(tf.keras.layers.Conv2D(<span class="number">64</span>, (<span class="number">3</span>,<span class="number">3</span>), activation=<span class="string">&#x27;relu&#x27;</span>))</span><br><span class="line">model.add(tf.keras.layers.MaxPooling2D(<span class="number">2</span>,<span class="number">2</span>))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">model.add(tf.keras.layers.Flatten())</span><br><span class="line">model.add(tf.keras.layers.Dense(<span class="number">512</span>, activation=<span class="string">&#x27;relu&#x27;</span>))</span><br><span class="line">model.add(tf.keras.layers.Dense(<span class="number">256</span>, activation=<span class="string">&#x27;relu&#x27;</span>))</span><br><span class="line">model.add(tf.keras.layers.Dense(<span class="number">1</span>, activation=<span class="string">&#x27;sigmoid&#x27;</span>))</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">model = tf.keras.models.Sequential()model.add(tf.keras.layers.Conv2D(<span class="number">32</span>, (<span class="number">3</span>,<span class="number">3</span>), activation=<span class="string">&#x27;relu&#x27;</span>, input_shape=(<span class="number">100</span>,<span class="number">100</span>,<span class="number">3</span>)))model.add(tf.keras.layers.MaxPooling2D(<span class="number">2</span>,<span class="number">2</span>))model.add(tf.keras.layers.Conv2D(<span class="number">64</span>, (<span class="number">3</span>,<span class="number">3</span>), activation=<span class="string">&#x27;relu&#x27;</span>))model.add(tf.keras.layers.MaxPooling2D(<span class="number">2</span>,<span class="number">2</span>))model.add(tf.keras.layers.Conv2D(<span class="number">64</span>, (<span class="number">3</span>,<span class="number">3</span>), activation=<span class="string">&#x27;relu&#x27;</span>))model.add(tf.keras.layers.MaxPooling2D(<span class="number">2</span>,<span class="number">2</span>))model.add(tf.keras.layers.Conv2D(<span class="number">64</span>, (<span class="number">3</span>,<span class="number">3</span>), activation=<span class="string">&#x27;relu&#x27;</span>))model.add(tf.keras.layers.MaxPooling2D(<span class="number">2</span>,<span class="number">2</span>))model.add(tf.keras.layers.Flatten())model.add(tf.keras.layers.Dense(<span class="number">512</span>, activation=<span class="string">&#x27;relu&#x27;</span>))model.add(tf.keras.layers.Dense(<span class="number">256</span>, activation=<span class="string">&#x27;relu&#x27;</span>))model.add(tf.keras.layers.Dense(<span class="number">1</span>, activation=<span class="string">&#x27;sigmoid&#x27;</span>))</span><br></pre></td></tr></table></figure>
 
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">model.summary()</span><br></pre></td></tr></table></figure>
 
-<pre><code>Model: &quot;sequential&quot;
-_________________________________________________________________
-Layer (type)                 Output Shape              Param #   
-=================================================================
-conv2d (Conv2D)              (None, 98, 98, 32)        896       
-_________________________________________________________________
-max_pooling2d (MaxPooling2D) (None, 49, 49, 32)        0         
-_________________________________________________________________
-conv2d_1 (Conv2D)            (None, 47, 47, 64)        18496     
-_________________________________________________________________
-max_pooling2d_1 (MaxPooling2 (None, 23, 23, 64)        0         
-_________________________________________________________________
-conv2d_2 (Conv2D)            (None, 21, 21, 64)        36928     
-_________________________________________________________________
-max_pooling2d_2 (MaxPooling2 (None, 10, 10, 64)        0         
-_________________________________________________________________
-conv2d_3 (Conv2D)            (None, 8, 8, 64)          36928     
-_________________________________________________________________
-max_pooling2d_3 (MaxPooling2 (None, 4, 4, 64)          0         
-_________________________________________________________________
-flatten (Flatten)            (None, 1024)              0         
-_________________________________________________________________
-dense (Dense)                (None, 512)               524800    
-_________________________________________________________________
-dense_1 (Dense)              (None, 256)               131328    
-_________________________________________________________________
-dense_2 (Dense)              (None, 1)                 257       
-=================================================================
-Total params: 749,633
-Trainable params: 749,633
-Non-trainable params: 0
-_________________________________________________________________
+<pre><code>Model: &quot;sequential&quot;_________________________________________________________________Layer (type)                 Output Shape              Param #   =================================================================conv2d (Conv2D)              (None, 98, 98, 32)        896       _________________________________________________________________max_pooling2d (MaxPooling2D) (None, 49, 49, 32)        0         _________________________________________________________________conv2d_1 (Conv2D)            (None, 47, 47, 64)        18496     _________________________________________________________________max_pooling2d_1 (MaxPooling2 (None, 23, 23, 64)        0         _________________________________________________________________conv2d_2 (Conv2D)            (None, 21, 21, 64)        36928     _________________________________________________________________max_pooling2d_2 (MaxPooling2 (None, 10, 10, 64)        0         _________________________________________________________________conv2d_3 (Conv2D)            (None, 8, 8, 64)          36928     _________________________________________________________________max_pooling2d_3 (MaxPooling2 (None, 4, 4, 64)          0         _________________________________________________________________flatten (Flatten)            (None, 1024)              0         _________________________________________________________________dense (Dense)                (None, 512)               524800    _________________________________________________________________dense_1 (Dense)              (None, 256)               131328    _________________________________________________________________dense_2 (Dense)              (None, 1)                 257       =================================================================Total params: 749,633Trainable params: 749,633Non-trainable params: 0_________________________________________________________________
 </code></pre>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">model.<span class="built_in">compile</span>(optimizer=Adam(lr=<span class="number">1e-4</span>), loss=<span class="string">&#x27;binary_crossentropy&#x27;</span>, metrics=[<span class="string">&#x27;acc&#x27;</span>])</span><br></pre></td></tr></table></figure>
 
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 数据预处理</span></span><br><span class="line"></span><br><span class="line">train_datagen = ImageDataGenerator(rescale=<span class="number">1.</span>/<span class="number">255</span>)</span><br><span class="line">validation_datagen = ImageDataGenerator(rescale=<span class="number">1.</span>/<span class="number">255</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 数据预处理train_datagen = ImageDataGenerator(rescale=1./255)validation_datagen = ImageDataGenerator(rescale=1./255)</span></span><br></pre></td></tr></table></figure>
 
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">train_generator = train_datagen.flow_from_directory(</span><br><span class="line">    train_dir,</span><br><span class="line">    target_size=(<span class="number">100</span>,<span class="number">100</span>),</span><br><span class="line">    batch_size=<span class="number">200</span>,</span><br><span class="line">    class_mode=<span class="string">&#x27;binary&#x27;</span>)</span><br><span class="line"></span><br><span class="line">validation_generator = validation_datagen.flow_from_directory(</span><br><span class="line">    validation_dir,</span><br><span class="line">    target_size=(<span class="number">100</span>,<span class="number">100</span>),</span><br><span class="line">    batch_size=<span class="number">50</span>,</span><br><span class="line">    class_mode=<span class="string">&#x27;binary&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">train_generator = train_datagen.flow_from_directory(    train_dir,    target_size=(<span class="number">100</span>,<span class="number">100</span>),    batch_size=<span class="number">200</span>,    class_mode=<span class="string">&#x27;binary&#x27;</span>)validation_generator = validation_datagen.flow_from_directory(    validation_dir,    target_size=(<span class="number">100</span>,<span class="number">100</span>),    batch_size=<span class="number">50</span>,    class_mode=<span class="string">&#x27;binary&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
-<pre><code>Found 20000 images belonging to 2 classes.
-Found 5000 images belonging to 2 classes.
+<pre><code>Found 20000 images belonging to 2 classes.Found 5000 images belonging to 2 classes.
 </code></pre>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 训练网络模型</span></span><br><span class="line"></span><br><span class="line">history = model.fit_generator(</span><br><span class="line">    train_generator,</span><br><span class="line">    steps_per_epoch=<span class="number">100</span>,       </span><br><span class="line">    epochs=<span class="number">100</span>,</span><br><span class="line">    validation_data=validation_generator,</span><br><span class="line">    validation_steps=<span class="number">100</span>,</span><br><span class="line">    verbose=<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 训练网络模型history = model.fit_generator(    train_generator,    steps_per_epoch=100,           epochs=100,    validation_data=validation_generator,    validation_steps=100,    verbose=2)</span></span><br></pre></td></tr></table></figure>
 
-<pre><code>WARNING:tensorflow:From &lt;ipython-input-7-56c50a545488&gt;:3: Model.fit_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
-Instructions for updating:
-Please use Model.fit, which supports generators.
-Epoch 1/100
-100/100 - 56s - loss: 0.6735 - acc: 0.5810 - val_loss: 0.6614 - val_acc: 0.5828
-Epoch 2/100
-100/100 - 47s - loss: 0.6262 - acc: 0.6442 - val_loss: 0.6030 - val_acc: 0.6682
-Epoch 3/100
-100/100 - 48s - loss: 0.5829 - acc: 0.6897 - val_loss: 0.5558 - val_acc: 0.7140
-Epoch 4/100
-100/100 - 48s - loss: 0.5429 - acc: 0.7253 - val_loss: 0.5232 - val_acc: 0.7410
-Epoch 5/100
-100/100 - 50s - loss: 0.5136 - acc: 0.7502 - val_loss: 0.5049 - val_acc: 0.7538
-Epoch 6/100
-100/100 - 60s - loss: 0.4864 - acc: 0.7682 - val_loss: 0.5060 - val_acc: 0.7486
-Epoch 7/100
-100/100 - 52s - loss: 0.4727 - acc: 0.7768 - val_loss: 0.4669 - val_acc: 0.7766
-Epoch 8/100
-100/100 - 54s - loss: 0.4522 - acc: 0.7893 - val_loss: 0.4569 - val_acc: 0.7824
-Epoch 9/100
-100/100 - 48s - loss: 0.4324 - acc: 0.8004 - val_loss: 0.4454 - val_acc: 0.7910
-Epoch 10/100
-100/100 - 52s - loss: 0.4326 - acc: 0.7960 - val_loss: 0.4471 - val_acc: 0.7896
-Epoch 11/100
-100/100 - 57s - loss: 0.4089 - acc: 0.8145 - val_loss: 0.4647 - val_acc: 0.7752
-Epoch 12/100
-100/100 - 57s - loss: 0.4000 - acc: 0.8195 - val_loss: 0.4215 - val_acc: 0.8086
-Epoch 13/100
-100/100 - 52s - loss: 0.3804 - acc: 0.8324 - val_loss: 0.4252 - val_acc: 0.8036
-Epoch 14/100
-100/100 - 56s - loss: 0.3761 - acc: 0.8307 - val_loss: 0.4084 - val_acc: 0.8160
-Epoch 15/100
-100/100 - 62s - loss: 0.3654 - acc: 0.8406 - val_loss: 0.4025 - val_acc: 0.8192
-Epoch 16/100
-100/100 - 63s - loss: 0.3486 - acc: 0.8478 - val_loss: 0.4064 - val_acc: 0.8154
-Epoch 17/100
-100/100 - 60s - loss: 0.3461 - acc: 0.8503 - val_loss: 0.3954 - val_acc: 0.8216
-Epoch 18/100
-100/100 - 62s - loss: 0.3330 - acc: 0.8572 - val_loss: 0.4032 - val_acc: 0.8162
-Epoch 19/100
-100/100 - 56s - loss: 0.3334 - acc: 0.8551 - val_loss: 0.4024 - val_acc: 0.8178
-Epoch 20/100
-100/100 - 50s - loss: 0.3101 - acc: 0.8681 - val_loss: 0.4002 - val_acc: 0.8196
-Epoch 21/100
-100/100 - 56s - loss: 0.3063 - acc: 0.8683 - val_loss: 0.3849 - val_acc: 0.8282
-Epoch 22/100
-100/100 - 58s - loss: 0.3077 - acc: 0.8692 - val_loss: 0.3964 - val_acc: 0.8236
-Epoch 23/100
-100/100 - 57s - loss: 0.2823 - acc: 0.8821 - val_loss: 0.4075 - val_acc: 0.8186
-Epoch 24/100
-100/100 - 57s - loss: 0.2861 - acc: 0.8791 - val_loss: 0.3851 - val_acc: 0.8306
-Epoch 25/100
-100/100 - 47s - loss: 0.2703 - acc: 0.8869 - val_loss: 0.3875 - val_acc: 0.8300
-Epoch 26/100
-100/100 - 48s - loss: 0.2640 - acc: 0.8895 - val_loss: 0.3858 - val_acc: 0.8308
-Epoch 27/100
-100/100 - 50s - loss: 0.2633 - acc: 0.8884 - val_loss: 0.3951 - val_acc: 0.8266
-Epoch 28/100
-100/100 - 49s - loss: 0.2453 - acc: 0.8988 - val_loss: 0.3941 - val_acc: 0.8250
-Epoch 29/100
-100/100 - 48s - loss: 0.2427 - acc: 0.8967 - val_loss: 0.3896 - val_acc: 0.8306
-Epoch 30/100
-100/100 - 46s - loss: 0.2402 - acc: 0.9013 - val_loss: 0.3879 - val_acc: 0.8314
-Epoch 31/100
-100/100 - 55s - loss: 0.2128 - acc: 0.9150 - val_loss: 0.4043 - val_acc: 0.8310
-Epoch 32/100
-100/100 - 52s - loss: 0.2093 - acc: 0.9154 - val_loss: 0.3957 - val_acc: 0.8324
-Epoch 33/100
-100/100 - 56s - loss: 0.2075 - acc: 0.9168 - val_loss: 0.4160 - val_acc: 0.8206
-Epoch 34/100
-100/100 - 52s - loss: 0.1902 - acc: 0.9269 - val_loss: 0.4102 - val_acc: 0.8324
-Epoch 35/100
-100/100 - 47s - loss: 0.1797 - acc: 0.9317 - val_loss: 0.4141 - val_acc: 0.8316
-Epoch 36/100
-100/100 - 51s - loss: 0.1824 - acc: 0.9292 - val_loss: 0.4255 - val_acc: 0.8224
-Epoch 37/100
-100/100 - 46s - loss: 0.1748 - acc: 0.9314 - val_loss: 0.4149 - val_acc: 0.8324
-Epoch 38/100
-100/100 - 58s - loss: 0.1624 - acc: 0.9400 - val_loss: 0.4234 - val_acc: 0.8350
-Epoch 39/100
-100/100 - 57s - loss: 0.1535 - acc: 0.9430 - val_loss: 0.4447 - val_acc: 0.8260
-Epoch 40/100
-100/100 - 62s - loss: 0.1445 - acc: 0.9463 - val_loss: 0.4403 - val_acc: 0.8262
-Epoch 41/100
-100/100 - 56s - loss: 0.1412 - acc: 0.9487 - val_loss: 0.4714 - val_acc: 0.8236
-Epoch 42/100
-100/100 - 57s - loss: 0.1274 - acc: 0.9536 - val_loss: 0.4667 - val_acc: 0.8262
-Epoch 43/100
-100/100 - 54s - loss: 0.1179 - acc: 0.9592 - val_loss: 0.4756 - val_acc: 0.8254
-Epoch 44/100
-100/100 - 58s - loss: 0.1158 - acc: 0.9589 - val_loss: 0.4832 - val_acc: 0.8254
-Epoch 45/100
-100/100 - 58s - loss: 0.1100 - acc: 0.9617 - val_loss: 0.4907 - val_acc: 0.8242
-Epoch 46/100
-100/100 - 56s - loss: 0.0998 - acc: 0.9675 - val_loss: 0.5583 - val_acc: 0.8166
-Epoch 47/100
-100/100 - 58s - loss: 0.1060 - acc: 0.9619 - val_loss: 0.5073 - val_acc: 0.8238
-Epoch 48/100
-100/100 - 59s - loss: 0.0833 - acc: 0.9742 - val_loss: 0.5349 - val_acc: 0.8230
-Epoch 49/100
-100/100 - 58s - loss: 0.0829 - acc: 0.9728 - val_loss: 0.5584 - val_acc: 0.8198
-Epoch 50/100
-100/100 - 56s - loss: 0.0842 - acc: 0.9712 - val_loss: 0.5349 - val_acc: 0.8262
-Epoch 51/100
-100/100 - 58s - loss: 0.0644 - acc: 0.9827 - val_loss: 0.5666 - val_acc: 0.8222
-Epoch 52/100
-100/100 - 58s - loss: 0.0711 - acc: 0.9768 - val_loss: 0.6334 - val_acc: 0.8110
-Epoch 53/100
-100/100 - 54s - loss: 0.0715 - acc: 0.9764 - val_loss: 0.5723 - val_acc: 0.8208
-Epoch 54/100
-100/100 - 60s - loss: 0.0582 - acc: 0.9836 - val_loss: 0.5986 - val_acc: 0.8194
-Epoch 55/100
-100/100 - 60s - loss: 0.0550 - acc: 0.9837 - val_loss: 0.5997 - val_acc: 0.8202
-Epoch 56/100
-100/100 - 59s - loss: 0.0481 - acc: 0.9876 - val_loss: 0.6305 - val_acc: 0.8226
-Epoch 57/100
-100/100 - 56s - loss: 0.0395 - acc: 0.9919 - val_loss: 0.6519 - val_acc: 0.8196
-Epoch 58/100
-100/100 - 58s - loss: 0.0493 - acc: 0.9852 - val_loss: 0.6309 - val_acc: 0.8218
-Epoch 59/100
-100/100 - 55s - loss: 0.0343 - acc: 0.9934 - val_loss: 0.6801 - val_acc: 0.8194
-Epoch 60/100
-100/100 - 54s - loss: 0.0297 - acc: 0.9951 - val_loss: 0.6740 - val_acc: 0.8230
-Epoch 61/100
-100/100 - 54s - loss: 0.0285 - acc: 0.9946 - val_loss: 0.7188 - val_acc: 0.8192
-Epoch 62/100
-100/100 - 54s - loss: 0.0277 - acc: 0.9952 - val_loss: 0.7245 - val_acc: 0.8202
-Epoch 63/100
-100/100 - 58s - loss: 0.0261 - acc: 0.9954 - val_loss: 0.7383 - val_acc: 0.8196
-Epoch 64/100
-100/100 - 58s - loss: 0.0244 - acc: 0.9956 - val_loss: 0.7439 - val_acc: 0.8196
-Epoch 65/100
-100/100 - 57s - loss: 0.0281 - acc: 0.9930 - val_loss: 0.7736 - val_acc: 0.8140
-Epoch 66/100
-100/100 - 58s - loss: 0.0185 - acc: 0.9982 - val_loss: 0.7876 - val_acc: 0.8210
-Epoch 67/100
-100/100 - 56s - loss: 0.0134 - acc: 0.9990 - val_loss: 0.8384 - val_acc: 0.8200
-Epoch 68/100
-100/100 - 54s - loss: 0.0138 - acc: 0.9991 - val_loss: 0.8202 - val_acc: 0.8178
-Epoch 69/100
-100/100 - 57s - loss: 0.0121 - acc: 0.9992 - val_loss: 0.8379 - val_acc: 0.8194
-Epoch 70/100
-100/100 - 54s - loss: 0.0147 - acc: 0.9974 - val_loss: 0.8334 - val_acc: 0.8228
-Epoch 71/100
-100/100 - 55s - loss: 0.0210 - acc: 0.9957 - val_loss: 0.9319 - val_acc: 0.8158
-Epoch 72/100
-100/100 - 58s - loss: 0.0364 - acc: 0.9872 - val_loss: 0.8502 - val_acc: 0.8192
-Epoch 73/100
-100/100 - 58s - loss: 0.0093 - acc: 0.9995 - val_loss: 0.8807 - val_acc: 0.8162
-Epoch 74/100
-100/100 - 58s - loss: 0.0067 - acc: 0.9998 - val_loss: 0.9034 - val_acc: 0.8200
-Epoch 75/100
-100/100 - 58s - loss: 0.0058 - acc: 1.0000 - val_loss: 0.9081 - val_acc: 0.8226
-Epoch 76/100
-100/100 - 58s - loss: 0.0050 - acc: 0.9999 - val_loss: 0.9226 - val_acc: 0.8218
-Epoch 77/100
-100/100 - 56s - loss: 0.0042 - acc: 1.0000 - val_loss: 0.9466 - val_acc: 0.8200
-Epoch 78/100
-100/100 - 60s - loss: 0.0040 - acc: 1.0000 - val_loss: 0.9602 - val_acc: 0.8198
-Epoch 79/100
-100/100 - 59s - loss: 0.0036 - acc: 1.0000 - val_loss: 0.9798 - val_acc: 0.8212
-Epoch 80/100
-100/100 - 60s - loss: 0.0034 - acc: 1.0000 - val_loss: 0.9861 - val_acc: 0.8226
-Epoch 81/100
-100/100 - 57s - loss: 0.0031 - acc: 1.0000 - val_loss: 1.0031 - val_acc: 0.8216
-Epoch 82/100
-100/100 - 54s - loss: 0.0028 - acc: 1.0000 - val_loss: 1.0195 - val_acc: 0.8190
-Epoch 83/100
-100/100 - 60s - loss: 0.0027 - acc: 1.0000 - val_loss: 1.0284 - val_acc: 0.8226
-Epoch 84/100
-100/100 - 57s - loss: 0.0025 - acc: 1.0000 - val_loss: 1.0482 - val_acc: 0.8202
-Epoch 85/100
-100/100 - 57s - loss: 0.0022 - acc: 1.0000 - val_loss: 1.0558 - val_acc: 0.8218
-Epoch 86/100
-100/100 - 54s - loss: 0.0020 - acc: 1.0000 - val_loss: 1.0789 - val_acc: 0.8228
-Epoch 87/100
-100/100 - 57s - loss: 0.0020 - acc: 1.0000 - val_loss: 1.0933 - val_acc: 0.8212
-Epoch 88/100
-100/100 - 58s - loss: 0.0016 - acc: 1.0000 - val_loss: 1.1085 - val_acc: 0.8204
-Epoch 89/100
-100/100 - 56s - loss: 0.0015 - acc: 1.0000 - val_loss: 1.1239 - val_acc: 0.8198
-Epoch 90/100
-100/100 - 56s - loss: 0.0015 - acc: 1.0000 - val_loss: 1.1274 - val_acc: 0.8212
-Epoch 91/100
-100/100 - 56s - loss: 0.0013 - acc: 1.0000 - val_loss: 1.1371 - val_acc: 0.8202
-Epoch 92/100
-100/100 - 54s - loss: 0.0012 - acc: 1.0000 - val_loss: 1.1573 - val_acc: 0.8180
-Epoch 93/100
-100/100 - 56s - loss: 0.0011 - acc: 1.0000 - val_loss: 1.1675 - val_acc: 0.8220
-Epoch 94/100
-100/100 - 61s - loss: 0.0010 - acc: 1.0000 - val_loss: 1.1889 - val_acc: 0.8210
-Epoch 95/100
-100/100 - 55s - loss: 9.4629e-04 - acc: 1.0000 - val_loss: 1.1969 - val_acc: 0.8206
-Epoch 96/100
-100/100 - 56s - loss: 8.7321e-04 - acc: 1.0000 - val_loss: 1.2154 - val_acc: 0.8212
-Epoch 97/100
-100/100 - 58s - loss: 8.9345e-04 - acc: 1.0000 - val_loss: 1.2188 - val_acc: 0.8200
-Epoch 98/100
-100/100 - 51s - loss: 7.3554e-04 - acc: 1.0000 - val_loss: 1.2311 - val_acc: 0.8208
-Epoch 99/100
-100/100 - 57s - loss: 6.9492e-04 - acc: 1.0000 - val_loss: 1.2404 - val_acc: 0.8208
-Epoch 100/100
-100/100 - 60s - loss: 8.1223e-04 - acc: 1.0000 - val_loss: 1.2503 - val_acc: 0.8216
+<pre><code>WARNING:tensorflow:From &lt;ipython-input-7-56c50a545488&gt;:3: Model.fit_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.Instructions for updating:Please use Model.fit, which supports generators.Epoch 1/100100/100 - 56s - loss: 0.6735 - acc: 0.5810 - val_loss: 0.6614 - val_acc: 0.5828Epoch 2/100100/100 - 47s - loss: 0.6262 - acc: 0.6442 - val_loss: 0.6030 - val_acc: 0.6682Epoch 3/100100/100 - 48s - loss: 0.5829 - acc: 0.6897 - val_loss: 0.5558 - val_acc: 0.7140Epoch 4/100100/100 - 48s - loss: 0.5429 - acc: 0.7253 - val_loss: 0.5232 - val_acc: 0.7410Epoch 5/100100/100 - 50s - loss: 0.5136 - acc: 0.7502 - val_loss: 0.5049 - val_acc: 0.7538Epoch 6/100100/100 - 60s - loss: 0.4864 - acc: 0.7682 - val_loss: 0.5060 - val_acc: 0.7486Epoch 7/100100/100 - 52s - loss: 0.4727 - acc: 0.7768 - val_loss: 0.4669 - val_acc: 0.7766Epoch 8/100100/100 - 54s - loss: 0.4522 - acc: 0.7893 - val_loss: 0.4569 - val_acc: 0.7824Epoch 9/100100/100 - 48s - loss: 0.4324 - acc: 0.8004 - val_loss: 0.4454 - val_acc: 0.7910Epoch 10/100100/100 - 52s - loss: 0.4326 - acc: 0.7960 - val_loss: 0.4471 - val_acc: 0.7896Epoch 11/100100/100 - 57s - loss: 0.4089 - acc: 0.8145 - val_loss: 0.4647 - val_acc: 0.7752Epoch 12/100100/100 - 57s - loss: 0.4000 - acc: 0.8195 - val_loss: 0.4215 - val_acc: 0.8086Epoch 13/100100/100 - 52s - loss: 0.3804 - acc: 0.8324 - val_loss: 0.4252 - val_acc: 0.8036Epoch 14/100100/100 - 56s - loss: 0.3761 - acc: 0.8307 - val_loss: 0.4084 - val_acc: 0.8160Epoch 15/100100/100 - 62s - loss: 0.3654 - acc: 0.8406 - val_loss: 0.4025 - val_acc: 0.8192Epoch 16/100100/100 - 63s - loss: 0.3486 - acc: 0.8478 - val_loss: 0.4064 - val_acc: 0.8154Epoch 17/100100/100 - 60s - loss: 0.3461 - acc: 0.8503 - val_loss: 0.3954 - val_acc: 0.8216Epoch 18/100100/100 - 62s - loss: 0.3330 - acc: 0.8572 - val_loss: 0.4032 - val_acc: 0.8162Epoch 19/100100/100 - 56s - loss: 0.3334 - acc: 0.8551 - val_loss: 0.4024 - val_acc: 0.8178Epoch 20/100100/100 - 50s - loss: 0.3101 - acc: 0.8681 - val_loss: 0.4002 - val_acc: 0.8196Epoch 21/100100/100 - 56s - loss: 0.3063 - acc: 0.8683 - val_loss: 0.3849 - val_acc: 0.8282Epoch 22/100100/100 - 58s - loss: 0.3077 - acc: 0.8692 - val_loss: 0.3964 - val_acc: 0.8236Epoch 23/100100/100 - 57s - loss: 0.2823 - acc: 0.8821 - val_loss: 0.4075 - val_acc: 0.8186Epoch 24/100100/100 - 57s - loss: 0.2861 - acc: 0.8791 - val_loss: 0.3851 - val_acc: 0.8306Epoch 25/100100/100 - 47s - loss: 0.2703 - acc: 0.8869 - val_loss: 0.3875 - val_acc: 0.8300Epoch 26/100100/100 - 48s - loss: 0.2640 - acc: 0.8895 - val_loss: 0.3858 - val_acc: 0.8308Epoch 27/100100/100 - 50s - loss: 0.2633 - acc: 0.8884 - val_loss: 0.3951 - val_acc: 0.8266Epoch 28/100100/100 - 49s - loss: 0.2453 - acc: 0.8988 - val_loss: 0.3941 - val_acc: 0.8250Epoch 29/100100/100 - 48s - loss: 0.2427 - acc: 0.8967 - val_loss: 0.3896 - val_acc: 0.8306Epoch 30/100100/100 - 46s - loss: 0.2402 - acc: 0.9013 - val_loss: 0.3879 - val_acc: 0.8314Epoch 31/100100/100 - 55s - loss: 0.2128 - acc: 0.9150 - val_loss: 0.4043 - val_acc: 0.8310Epoch 32/100100/100 - 52s - loss: 0.2093 - acc: 0.9154 - val_loss: 0.3957 - val_acc: 0.8324Epoch 33/100100/100 - 56s - loss: 0.2075 - acc: 0.9168 - val_loss: 0.4160 - val_acc: 0.8206Epoch 34/100100/100 - 52s - loss: 0.1902 - acc: 0.9269 - val_loss: 0.4102 - val_acc: 0.8324Epoch 35/100100/100 - 47s - loss: 0.1797 - acc: 0.9317 - val_loss: 0.4141 - val_acc: 0.8316Epoch 36/100100/100 - 51s - loss: 0.1824 - acc: 0.9292 - val_loss: 0.4255 - val_acc: 0.8224Epoch 37/100100/100 - 46s - loss: 0.1748 - acc: 0.9314 - val_loss: 0.4149 - val_acc: 0.8324Epoch 38/100100/100 - 58s - loss: 0.1624 - acc: 0.9400 - val_loss: 0.4234 - val_acc: 0.8350Epoch 39/100100/100 - 57s - loss: 0.1535 - acc: 0.9430 - val_loss: 0.4447 - val_acc: 0.8260Epoch 40/100100/100 - 62s - loss: 0.1445 - acc: 0.9463 - val_loss: 0.4403 - val_acc: 0.8262Epoch 41/100100/100 - 56s - loss: 0.1412 - acc: 0.9487 - val_loss: 0.4714 - val_acc: 0.8236Epoch 42/100100/100 - 57s - loss: 0.1274 - acc: 0.9536 - val_loss: 0.4667 - val_acc: 0.8262Epoch 43/100100/100 - 54s - loss: 0.1179 - acc: 0.9592 - val_loss: 0.4756 - val_acc: 0.8254Epoch 44/100100/100 - 58s - loss: 0.1158 - acc: 0.9589 - val_loss: 0.4832 - val_acc: 0.8254Epoch 45/100100/100 - 58s - loss: 0.1100 - acc: 0.9617 - val_loss: 0.4907 - val_acc: 0.8242Epoch 46/100100/100 - 56s - loss: 0.0998 - acc: 0.9675 - val_loss: 0.5583 - val_acc: 0.8166Epoch 47/100100/100 - 58s - loss: 0.1060 - acc: 0.9619 - val_loss: 0.5073 - val_acc: 0.8238Epoch 48/100100/100 - 59s - loss: 0.0833 - acc: 0.9742 - val_loss: 0.5349 - val_acc: 0.8230Epoch 49/100100/100 - 58s - loss: 0.0829 - acc: 0.9728 - val_loss: 0.5584 - val_acc: 0.8198Epoch 50/100100/100 - 56s - loss: 0.0842 - acc: 0.9712 - val_loss: 0.5349 - val_acc: 0.8262Epoch 51/100100/100 - 58s - loss: 0.0644 - acc: 0.9827 - val_loss: 0.5666 - val_acc: 0.8222Epoch 52/100100/100 - 58s - loss: 0.0711 - acc: 0.9768 - val_loss: 0.6334 - val_acc: 0.8110Epoch 53/100100/100 - 54s - loss: 0.0715 - acc: 0.9764 - val_loss: 0.5723 - val_acc: 0.8208Epoch 54/100100/100 - 60s - loss: 0.0582 - acc: 0.9836 - val_loss: 0.5986 - val_acc: 0.8194Epoch 55/100100/100 - 60s - loss: 0.0550 - acc: 0.9837 - val_loss: 0.5997 - val_acc: 0.8202Epoch 56/100100/100 - 59s - loss: 0.0481 - acc: 0.9876 - val_loss: 0.6305 - val_acc: 0.8226Epoch 57/100100/100 - 56s - loss: 0.0395 - acc: 0.9919 - val_loss: 0.6519 - val_acc: 0.8196Epoch 58/100100/100 - 58s - loss: 0.0493 - acc: 0.9852 - val_loss: 0.6309 - val_acc: 0.8218Epoch 59/100100/100 - 55s - loss: 0.0343 - acc: 0.9934 - val_loss: 0.6801 - val_acc: 0.8194Epoch 60/100100/100 - 54s - loss: 0.0297 - acc: 0.9951 - val_loss: 0.6740 - val_acc: 0.8230Epoch 61/100100/100 - 54s - loss: 0.0285 - acc: 0.9946 - val_loss: 0.7188 - val_acc: 0.8192Epoch 62/100100/100 - 54s - loss: 0.0277 - acc: 0.9952 - val_loss: 0.7245 - val_acc: 0.8202Epoch 63/100100/100 - 58s - loss: 0.0261 - acc: 0.9954 - val_loss: 0.7383 - val_acc: 0.8196Epoch 64/100100/100 - 58s - loss: 0.0244 - acc: 0.9956 - val_loss: 0.7439 - val_acc: 0.8196Epoch 65/100100/100 - 57s - loss: 0.0281 - acc: 0.9930 - val_loss: 0.7736 - val_acc: 0.8140Epoch 66/100100/100 - 58s - loss: 0.0185 - acc: 0.9982 - val_loss: 0.7876 - val_acc: 0.8210Epoch 67/100100/100 - 56s - loss: 0.0134 - acc: 0.9990 - val_loss: 0.8384 - val_acc: 0.8200Epoch 68/100100/100 - 54s - loss: 0.0138 - acc: 0.9991 - val_loss: 0.8202 - val_acc: 0.8178Epoch 69/100100/100 - 57s - loss: 0.0121 - acc: 0.9992 - val_loss: 0.8379 - val_acc: 0.8194Epoch 70/100100/100 - 54s - loss: 0.0147 - acc: 0.9974 - val_loss: 0.8334 - val_acc: 0.8228Epoch 71/100100/100 - 55s - loss: 0.0210 - acc: 0.9957 - val_loss: 0.9319 - val_acc: 0.8158Epoch 72/100100/100 - 58s - loss: 0.0364 - acc: 0.9872 - val_loss: 0.8502 - val_acc: 0.8192Epoch 73/100100/100 - 58s - loss: 0.0093 - acc: 0.9995 - val_loss: 0.8807 - val_acc: 0.8162Epoch 74/100100/100 - 58s - loss: 0.0067 - acc: 0.9998 - val_loss: 0.9034 - val_acc: 0.8200Epoch 75/100100/100 - 58s - loss: 0.0058 - acc: 1.0000 - val_loss: 0.9081 - val_acc: 0.8226Epoch 76/100100/100 - 58s - loss: 0.0050 - acc: 0.9999 - val_loss: 0.9226 - val_acc: 0.8218Epoch 77/100100/100 - 56s - loss: 0.0042 - acc: 1.0000 - val_loss: 0.9466 - val_acc: 0.8200Epoch 78/100100/100 - 60s - loss: 0.0040 - acc: 1.0000 - val_loss: 0.9602 - val_acc: 0.8198Epoch 79/100100/100 - 59s - loss: 0.0036 - acc: 1.0000 - val_loss: 0.9798 - val_acc: 0.8212Epoch 80/100100/100 - 60s - loss: 0.0034 - acc: 1.0000 - val_loss: 0.9861 - val_acc: 0.8226Epoch 81/100100/100 - 57s - loss: 0.0031 - acc: 1.0000 - val_loss: 1.0031 - val_acc: 0.8216Epoch 82/100100/100 - 54s - loss: 0.0028 - acc: 1.0000 - val_loss: 1.0195 - val_acc: 0.8190Epoch 83/100100/100 - 60s - loss: 0.0027 - acc: 1.0000 - val_loss: 1.0284 - val_acc: 0.8226Epoch 84/100100/100 - 57s - loss: 0.0025 - acc: 1.0000 - val_loss: 1.0482 - val_acc: 0.8202Epoch 85/100100/100 - 57s - loss: 0.0022 - acc: 1.0000 - val_loss: 1.0558 - val_acc: 0.8218Epoch 86/100100/100 - 54s - loss: 0.0020 - acc: 1.0000 - val_loss: 1.0789 - val_acc: 0.8228Epoch 87/100100/100 - 57s - loss: 0.0020 - acc: 1.0000 - val_loss: 1.0933 - val_acc: 0.8212Epoch 88/100100/100 - 58s - loss: 0.0016 - acc: 1.0000 - val_loss: 1.1085 - val_acc: 0.8204Epoch 89/100100/100 - 56s - loss: 0.0015 - acc: 1.0000 - val_loss: 1.1239 - val_acc: 0.8198Epoch 90/100100/100 - 56s - loss: 0.0015 - acc: 1.0000 - val_loss: 1.1274 - val_acc: 0.8212Epoch 91/100100/100 - 56s - loss: 0.0013 - acc: 1.0000 - val_loss: 1.1371 - val_acc: 0.8202Epoch 92/100100/100 - 54s - loss: 0.0012 - acc: 1.0000 - val_loss: 1.1573 - val_acc: 0.8180Epoch 93/100100/100 - 56s - loss: 0.0011 - acc: 1.0000 - val_loss: 1.1675 - val_acc: 0.8220Epoch 94/100100/100 - 61s - loss: 0.0010 - acc: 1.0000 - val_loss: 1.1889 - val_acc: 0.8210Epoch 95/100100/100 - 55s - loss: 9.4629e-04 - acc: 1.0000 - val_loss: 1.1969 - val_acc: 0.8206Epoch 96/100100/100 - 56s - loss: 8.7321e-04 - acc: 1.0000 - val_loss: 1.2154 - val_acc: 0.8212Epoch 97/100100/100 - 58s - loss: 8.9345e-04 - acc: 1.0000 - val_loss: 1.2188 - val_acc: 0.8200Epoch 98/100100/100 - 51s - loss: 7.3554e-04 - acc: 1.0000 - val_loss: 1.2311 - val_acc: 0.8208Epoch 99/100100/100 - 57s - loss: 6.9492e-04 - acc: 1.0000 - val_loss: 1.2404 - val_acc: 0.8208Epoch 100/100100/100 - 60s - loss: 8.1223e-04 - acc: 1.0000 - val_loss: 1.2503 - val_acc: 0.8216
 </code></pre>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 效果展示</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">acc = history.history[<span class="string">&#x27;acc&#x27;</span>]</span><br><span class="line">val_acc = history.history[<span class="string">&#x27;val_acc&#x27;</span>]</span><br><span class="line">loss = history.history[<span class="string">&#x27;loss&#x27;</span>]</span><br><span class="line">val_loss = history.history[<span class="string">&#x27;val_loss&#x27;</span>]</span><br><span class="line"></span><br><span class="line">epochs = <span class="built_in">range</span>(<span class="built_in">len</span>(acc))</span><br><span class="line"></span><br><span class="line">plt.plot(epochs, acc, <span class="string">&#x27;bo&#x27;</span>, label=<span class="string">&quot;Training accuracy&quot;</span>)</span><br><span class="line">plt.plot(epochs, val_acc, <span class="string">&#x27;b&#x27;</span>, label=<span class="string">&quot;Validation accuracy&quot;</span>)</span><br><span class="line">plt.title(<span class="string">&quot;Training and calidation accuracy&quot;</span>)</span><br><span class="line"></span><br><span class="line">plt.figure()</span><br><span class="line"></span><br><span class="line">plt.plot(epochs, loss, <span class="string">&#x27;bo&#x27;</span>, label=<span class="string">&quot;Training Loss&quot;</span>)</span><br><span class="line">plt.plot(epochs, val_loss, <span class="string">&#x27;b&#x27;</span>, label=<span class="string">&#x27;Validation Loss&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;Training and validation loss&#x27;</span>)</span><br><span class="line">plt.legend()</span><br><span class="line"></span><br><span class="line">plt.show()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 效果展示import matplotlib.pyplot as pltacc = history.history[&#x27;acc&#x27;]val_acc = history.history[&#x27;val_acc&#x27;]loss = history.history[&#x27;loss&#x27;]val_loss = history.history[&#x27;val_loss&#x27;]epochs = range(len(acc))plt.plot(epochs, acc, &#x27;bo&#x27;, label=&quot;Training accuracy&quot;)plt.plot(epochs, val_acc, &#x27;b&#x27;, label=&quot;Validation accuracy&quot;)plt.title(&quot;Training and calidation accuracy&quot;)plt.figure()plt.plot(epochs, loss, &#x27;bo&#x27;, label=&quot;Training Loss&quot;)plt.plot(epochs, val_loss, &#x27;b&#x27;, label=&#x27;Validation Loss&#x27;)plt.title(&#x27;Training and validation loss&#x27;)plt.legend()plt.show()</span></span><br></pre></td></tr></table></figure>
 
 
 <img src="https://gitee.com/anson1066/picgo_image/raw/master/img/20210818205658.png" alt="png" style="zoom:200%;" />
@@ -2843,6 +2473,14 @@ Epoch 100/100
 
 <img src="https://gitee.com/anson1066/picgo_image/raw/master/img/20210818205745.png" alt="png" style="zoom:200%;" />
     
+
+
+
+
+
+
+
+
 
 
 
@@ -2883,7 +2521,29 @@ Epoch 100/100
         <div class="article-info article-info-index">
           
               
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">神经网络</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
                 
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/机器学习//" class="article-tag-list-link color5">机器学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
                   
 
@@ -2933,7 +2593,7 @@ Epoch 100/100
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://anson1066.github.io/2021/08/18/CNN/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://anson1066.github.io/2021/08/08/CNN/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -2947,9 +2607,18 @@ Epoch 100/100
   
 <nav id="article-nav">
   
+    <a href="/2021/08/10/SVM/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          SVM
+        
+      </div>
+    </a>
   
-    <a href="/2021/08/10/SVM/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">SVM</div>
+  
+    <a href="/2021/08/06/SGD/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SGD</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -3117,6 +2786,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">神经网络</a>
               </li>
             
             <div class="clearfix"></div>
